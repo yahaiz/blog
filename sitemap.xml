@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yahaiz.github.io/blog/posts/python-basics/index.html</loc>
-    <lastmod>2025-11-18T09:24:13.386Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/posts/java-lab-1/index.html</loc>
+    <lastmod>2025-11-18T23:10:27.543Z</lastmod>
   </url>
   <url>
-    <loc>https://yahaiz.github.io/blog/posts/java-lab-1/index.html</loc>
-    <lastmod>2025-11-18T22:56:50.686Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/posts/java-lab-1/java-lab-1-slides.html</loc>
+    <lastmod>2025-11-18T23:10:27.543Z</lastmod>
   </url>
   <url>
     <loc>https://yahaiz.github.io/blog/about.html</loc>
@@ -15,9 +15,5 @@
   <url>
     <loc>https://yahaiz.github.io/blog/index.html</loc>
     <lastmod>2025-11-18T22:44:42.125Z</lastmod>
-  </url>
-  <url>
-    <loc>https://yahaiz.github.io/blog/posts/post-template/index.html</loc>
-    <lastmod>2025-11-18T09:24:13.386Z</lastmod>
   </url>
 </urlset>
