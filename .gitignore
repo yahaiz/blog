@@ -44,3 +44,5 @@ desktop.ini
 *.tmp
 *.bak
 *.cache
+
+**/*.quarto_ipynb

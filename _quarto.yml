@@ -21,7 +21,9 @@ format:
     theme:
       light: Cosmo
       dark: Superhero
-    css: styles.css
+    format-links: [pdf]
+  pdf:
+    output-file: NULL
 
 
 
