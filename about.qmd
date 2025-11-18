@@ -1,0 +1,18 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/yahya-izadi/
+      target: _blank
+    - icon: github
+      text: Github
+      href: https://github.com/yahaiz
+      target: _blank
+
+---
+
+About this blog

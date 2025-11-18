@@ -1,0 +1,35 @@
+---
+title: "Post Title"
+author: "Yahya Izadi"
+date: "2025-11-17"
+categories: [category1, category2]
+image: "image.jpg"
+format:
+  quarto-purple-fox-html: default
+---
+
+## Introduction
+
+Write your introduction here.
+
+## Main Content
+
+Your main content goes here.
+
+### Subsection
+
+More details.
+
+## Code Example
+
+```python
+# Add your code here
+print("Hello, World!")
+```
+
+## Conclusion
+
+Wrap up your post here.
+
+> [!tip] Tip
+> Add helpful tips using callout blocks.

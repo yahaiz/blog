@@ -1,0 +1,28 @@
+project:
+  type: website
+
+website:
+  description: "A blog built with Quarto"
+  site-url: https://your-website-url.example.com # you must change this appropriately for RSS feeds to work properly
+  title: "Yahya Izadi"
+  navbar:
+    right:
+      - about.qmd
+      - icon: linkedin
+        text: LinkedIn
+        href: https://www.linkedin.com/in/yahya-izadi/
+        target: _blank
+      - icon: github
+        text: Github
+        href: https://github.com/yahaiz
+        target: _blank
+format:
+  html:
+    theme:
+      light: Cosmo
+      dark: Superhero
+    css: styles.css
+
+
+
+
