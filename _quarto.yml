@@ -21,9 +21,12 @@ format:
     theme:
       light: Cosmo
       dark: Superhero
-    format-links: [pdf]
+    format-links: [pdf, revealjs]
   pdf:
     output-file: NULL
+  revealjs:
+    output-file: slides.html
+    theme: simple
 
 
 
