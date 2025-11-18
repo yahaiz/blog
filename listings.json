@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/java-lab-1/index.html",
       "/posts/python-basics/index.html",
       "/posts/post-template/index.html"
     ]

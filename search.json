@@ -42,11 +42,81 @@
     "text": "Conclusion\nPython’s simplicity and power make it an ideal language for beginners and experienced developers alike. This is just the beginning – there’s so much more to explore!\n\n\n\n\n\n\nTipNext Steps\n\n\n\nTry modifying the code examples above and experiment with your own variations. The best way to learn Python is by writing code!\n\n\n\n\n\n\n\n\nNoteResources\n\n\n\nCheck out Python.org for official documentation and tutorials."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Yahya Izadi",
+    "objectID": "posts/java-lab-1/index.html",
+    "href": "posts/java-lab-1/index.html",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
     "section": "",
-    "text": "Getting Started with Python: A Beginner’s Guide\n\n\n\npython\n\nprogramming\n\ntutorial\n\n\n\n\n\n\n\n\n\nNov 18, 2025\n\n\nYahya Izadi\n\n\n\n\n\n\n\n\n\n\n\n\nPost Title\n\n\n\ncategory1\n\ncategory2\n\n\n\n\n\n\n\n\n\nNov 17, 2025\n\n\nYahya Izadi\n\n\n\n\n\nNo matching items"
+    "text": "In this session, we’ll cover the fundamentals of Java programming and get started with writing our first Java programs."
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#introduction",
+    "href": "posts/java-lab-1/index.html#introduction",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "",
+    "text": "In this session, we’ll cover the fundamentals of Java programming and get started with writing our first Java programs."
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#setup-and-installation",
+    "href": "posts/java-lab-1/index.html#setup-and-installation",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Setup and Installation",
+    "text": "Setup and Installation\nTo start working with Java, you need to install the JDK (Java Development Kit):\n\nDownload JDK from Oracle’s website\nInstall JDK on your system\nConfigure environment variables (JAVA_HOME, PATH)"
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#your-first-java-program",
+    "href": "posts/java-lab-1/index.html#your-first-java-program",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Your First Java Program",
+    "text": "Your First Java Program\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n\nCode Explanation\n\npublic class HelloWorld: Defines a public class named HelloWorld\npublic static void main(String[] args): The main method - entry point of the program\nSystem.out.println(): Prints output to the console"
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#compiling-and-running",
+    "href": "posts/java-lab-1/index.html#compiling-and-running",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Compiling and Running",
+    "text": "Compiling and Running\nTo compile and run your program:\njavac HelloWorld.java\njava HelloWorld"
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#data-types-in-java",
+    "href": "posts/java-lab-1/index.html#data-types-in-java",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Data Types in Java",
+    "text": "Data Types in Java\n\nPrimitive Data Types\n// Integer types\nint age = 25;\nlong population = 7000000000L;\n\n// Floating-point types\nfloat price = 19.99f;\ndouble pi = 3.14159265359;\n\n// Character type\nchar grade = 'A';\n\n// Boolean type\nboolean isStudent = true;\n\n\nReference Types\nString name = \"John Doe\";\nString[] courses = {\"Java\", \"Python\", \"C++\"};"
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#operators",
+    "href": "posts/java-lab-1/index.html#operators",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Operators",
+    "text": "Operators\n\nArithmetic Operators\nint a = 10;\nint b = 3;\n\nint sum = a + b;      // Addition: 13\nint diff = a - b;     // Subtraction: 7\nint product = a * b;  // Multiplication: 30\nint quotient = a / b; // Division: 3\nint remainder = a % b; // Modulus: 1\n\n\nComparison Operators\nint x = 5;\nint y = 10;\n\nboolean isEqual = (x == y);        // false\nboolean isNotEqual = (x != y);     // true\nboolean isGreater = (x &gt; y);       // false\nboolean isLess = (x &lt; y);          // true"
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#control-flow-statements",
+    "href": "posts/java-lab-1/index.html#control-flow-statements",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Control Flow Statements",
+    "text": "Control Flow Statements\n\nif-else Statement\nint score = 85;\n\nif (score &gt;= 90) {\n    System.out.println(\"Excellent\");\n} else if (score &gt;= 70) {\n    System.out.println(\"Good\");\n} else {\n    System.out.println(\"Pass\");\n}\n\n\nfor Loop\nfor (int i = 1; i &lt;= 5; i++) {\n    System.out.println(\"Number: \" + i);\n}\n\n\nwhile Loop\nint count = 0;\nwhile (count &lt; 5) {\n    System.out.println(\"Count: \" + count);\n    count++;\n}"
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#lab-exercises",
+    "href": "posts/java-lab-1/index.html#lab-exercises",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Lab Exercises",
+    "text": "Lab Exercises\n\nWrite a program that takes two numbers from the user and prints their sum\nWrite a program that checks if a number is even or odd\nWrite a program that prints numbers from 1 to 10"
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#summary",
+    "href": "posts/java-lab-1/index.html#summary",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Summary",
+    "text": "Summary\nIn this session, we covered:\n\nStructure of a Java program\nData types (primitive and reference)\nOperators (arithmetic and comparison)\nControl flow statements (if-else, for, while)"
+  },
+  {
+    "objectID": "posts/java-lab-1/index.html#resources",
+    "href": "posts/java-lab-1/index.html#resources",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Resources",
+    "text": "Resources\n\nOfficial Java Documentation\nJava Tutorial - W3Schools\nJava Programming Tutorial"
   },
   {
     "objectID": "about.html",
@@ -54,6 +124,13 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yahya Izadi",
+    "section": "",
+    "text": "Java Lab Session 1: Introduction to Java Programming\n\n\n\njava\n\nprogramming\n\nlab\n\n\n\n\n\n\n\n\n\nNov 19, 2025\n\n\nYahya Izadi\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with Python: A Beginner’s Guide\n\n\n\npython\n\nprogramming\n\ntutorial\n\n\n\n\n\n\n\n\n\nNov 18, 2025\n\n\nYahya Izadi\n\n\n\n\n\n\n\n\n\n\n\n\nPost Title\n\n\n\ncategory1\n\ncategory2\n\n\n\n\n\n\n\n\n\nNov 17, 2025\n\n\nYahya Izadi\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-template/index.html",
