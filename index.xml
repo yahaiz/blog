@@ -649,7 +649,7 @@ font-style: inherit;">}</span></span></code></pre></div></div>
 <p>Let’s explore some fundamental Python concepts.</p>
 <section id="variables-and-data-types" class="level3">
 <h3 class="anchored" data-anchor-id="variables-and-data-types">Variables and Data Types</h3>
-<div id="0b49192e" class="cell" data-execution_count="1">
+<div id="173bbe9a" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Variables in Python</span></span>
@@ -698,7 +698,7 @@ font-style: inherit;">"</span>)</span></code></pre></div></div>
 </section>
 <section id="lists-and-loops" class="level3">
 <h3 class="anchored" data-anchor-id="lists-and-loops">Lists and Loops</h3>
-<div id="0704e28b" class="cell" data-execution_count="2">
+<div id="b7321d75" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Working with lists</span></span>
@@ -742,7 +742,7 @@ I like grapes</code></pre>
 </section>
 <section id="functions" class="level3">
 <h3 class="anchored" data-anchor-id="functions">Functions</h3>
-<div id="bce2e53b" class="cell" data-execution_count="3">
+<div id="690fb92b" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Defining a simple function</span></span>
@@ -783,7 +783,7 @@ font-style: inherit;">print</span>(message)</span></code></pre></div></div>
 <section id="practical-example-data-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="practical-example-data-analysis">Practical Example: Data Analysis</h2>
 <p>Let’s see how Python can be used for basic data analysis:</p>
-<div id="85e45f4d" class="cell" data-execution_count="4">
+<div id="3b462963" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Simple data analysis</span></span>
