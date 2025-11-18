@@ -619,5 +619,83 @@ font-style: inherit;">}</span></span></code></pre></div></div>
   <pubDate>Tue, 18 Nov 2025 20:30:00 GMT</pubDate>
   <media:content url="https://yahaiz.github.io/blog/posts/java-lab-1" medium="image"/>
 </item>
+<item>
+  <title>Scientific Computing - Session 3: Chebyshev Polynomials</title>
+  <dc:creator>Yahya Izadi</dc:creator>
+  <link>https://yahaiz.github.io/blog/posts/scientific-computing-03/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this session of Scientific Computing, we explore <strong>Chebyshev Polynomials</strong>, a sequence of orthogonal polynomials that play a crucial role in approximation theory and numerical analysis. They are particularly important for minimizing interpolation error.</p>
+</section>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>The Chebyshev polynomial of degree <img src="https://latex.codecogs.com/png.latex?n">, denoted as <img src="https://latex.codecogs.com/png.latex?T_n(x)">, is defined for <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5B-1,%201%5D"> by the formula:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AT_n(x)%20=%20%5Ccos(n%20%5Ccos%5E%7B-1%7D(x)),%20%5Cquad%20n%20%5Cge%200%0A"></p>
+</section>
+<section id="key-properties" class="level2">
+<h2 class="anchored" data-anchor-id="key-properties">Key Properties</h2>
+<p>Chebyshev polynomials exhibit several interesting and useful properties:</p>
+<ol type="1">
+<li><p><strong>Recurrence Relation</strong>: <img src="https://latex.codecogs.com/png.latex?%0AT_%7Bn+1%7D(x)%20=%202x%20T_n(x)%20-%20T_%7Bn-1%7D(x),%20%5Cquad%20n%20%5Cge%201%0A"> with initial conditions <img src="https://latex.codecogs.com/png.latex?T_0(x)%20=%201"> and <img src="https://latex.codecogs.com/png.latex?T_1(x)%20=%20x">.</p></li>
+<li><p><strong>Leading Coefficient</strong>: The leading coefficient of <img src="https://latex.codecogs.com/png.latex?T_n(x)"> is <img src="https://latex.codecogs.com/png.latex?2%5E%7Bn-1%7D"> for <img src="https://latex.codecogs.com/png.latex?n%20%5Cge%201">.</p></li>
+<li><p><strong>Symmetry</strong>:</p>
+<ul>
+<li>If <img src="https://latex.codecogs.com/png.latex?n"> is even, <img src="https://latex.codecogs.com/png.latex?T_n(x)"> is an even function.</li>
+<li>If <img src="https://latex.codecogs.com/png.latex?n"> is odd, <img src="https://latex.codecogs.com/png.latex?T_n(x)"> is an odd function.</li>
+</ul></li>
+<li><p><strong>Roots</strong>: The roots of <img src="https://latex.codecogs.com/png.latex?T_n(x)"> are real, distinct, and lie in <img src="https://latex.codecogs.com/png.latex?(-1,%201)">. They are given by: <img src="https://latex.codecogs.com/png.latex?%0Ax_j%20=%20%5Ccos%5Cleft(%5Cfrac%7B2j-1%7D%7B2n%7D%5Cpi%5Cright),%20%5Cquad%20j%20=%201,%202,%20%5Cdots,%20n%0A"></p></li>
+<li><p><strong>Extrema</strong>: The absolute value of <img src="https://latex.codecogs.com/png.latex?T_n(x)"> is bounded by 1 on <img src="https://latex.codecogs.com/png.latex?%5B-1,%201%5D">: <img src="https://latex.codecogs.com/png.latex?%0A%7CT_n(x)%7C%20%5Cle%201%0A"> The extrema occur at <img src="https://latex.codecogs.com/png.latex?n+1"> points: <img src="https://latex.codecogs.com/png.latex?%0Ax_k%20=%20%5Ccos%5Cleft(%5Cfrac%7Bk%5Cpi%7D%7Bn%7D%5Cright),%20%5Cquad%20k%20=%200,%201,%20%5Cdots,%20n%0A"> At these points, <img src="https://latex.codecogs.com/png.latex?T_n(x_k)%20=%20(-1)%5Ek">.</p></li>
+</ol>
+</section>
+<section id="first-few-polynomials" class="level2">
+<h2 class="anchored" data-anchor-id="first-few-polynomials">First Few Polynomials</h2>
+<p>Using the recurrence relation, we can derive the first few polynomials:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?T_0(x)%20=%201"></li>
+<li><img src="https://latex.codecogs.com/png.latex?T_1(x)%20=%20x"></li>
+<li><img src="https://latex.codecogs.com/png.latex?T_2(x)%20=%202x%5E2%20-%201"></li>
+<li><img src="https://latex.codecogs.com/png.latex?T_3(x)%20=%204x%5E3%20-%203x"></li>
+</ul>
+</section>
+<section id="minimax-property" class="level2">
+<h2 class="anchored" data-anchor-id="minimax-property">Minimax Property</h2>
+<p>One of the most significant properties of Chebyshev polynomials is related to polynomial approximation.</p>
+<p><strong>Theorem</strong>: Among all monic polynomials <img src="https://latex.codecogs.com/png.latex?P_n(x)"> of degree <img src="https://latex.codecogs.com/png.latex?n"> (polynomials with leading coefficient 1), the one that has the smallest maximum absolute value on <img src="https://latex.codecogs.com/png.latex?%5B-1,%201%5D"> is:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7B1%7D%7B2%5E%7Bn-1%7D%7D%20T_n(x)%0A"></p>
+<p>This property is fundamental in <strong>minimax approximation</strong>.</p>
+</section>
+<section id="application-in-interpolation" class="level2">
+<h2 class="anchored" data-anchor-id="application-in-interpolation">Application in Interpolation</h2>
+<p>When interpolating a function <img src="https://latex.codecogs.com/png.latex?f(x)"> by a polynomial <img src="https://latex.codecogs.com/png.latex?P_n(x)"> of degree <img src="https://latex.codecogs.com/png.latex?n"> at nodes <img src="https://latex.codecogs.com/png.latex?x_0,%20%5Cdots,%20x_n">, the error is given by:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Af(x)%20-%20P_n(x)%20=%20%5Cfrac%7Bf%5E%7B(n+1)%7D(%5Cxi)%7D%7B(n+1)!%7D%20%5Cprod_%7Bi=0%7D%5En%20(x%20-%20x_i)%0A"></p>
+<p>To minimize the error bound, we need to minimize the term <img src="https://latex.codecogs.com/png.latex?%7C%5Cprod_%7Bi=0%7D%5En%20(x%20-%20x_i)%7C">. This is achieved by choosing the interpolation nodes <img src="https://latex.codecogs.com/png.latex?x_i"> to be the roots of the Chebyshev polynomial <img src="https://latex.codecogs.com/png.latex?T_%7Bn+1%7D(x)">.</p>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Consider approximating <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20%5Csin(%5Cfrac%7B%5Cpi%7D%7B2%7Dx)"> on <img src="https://latex.codecogs.com/png.latex?%5B-1,%201%5D">. Using Chebyshev nodes significantly reduces the maximum error compared to using equidistant nodes.</p>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>Chebyshev polynomials provide an optimal way to choose interpolation points to minimize the worst-case error (Runge’s phenomenon). They are a cornerstone of approximation theory.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>scientific computing</category>
+  <category>numerical analysis</category>
+  <category>approximation theory</category>
+  <category>chebyshev</category>
+  <guid>https://yahaiz.github.io/blog/posts/scientific-computing-03/</guid>
+  <pubDate>Tue, 18 Nov 2025 20:30:00 GMT</pubDate>
+  <media:content url="https://yahaiz.github.io/blog/posts/scientific-computing-03" medium="image"/>
+</item>
 </channel>
 </rss>

@@ -1,5 +1,194 @@
 [
   {
+    "objectID": "posts/scientific-computing-03/index.html",
+    "href": "posts/scientific-computing-03/index.html",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "",
+    "text": "In this session of Scientific Computing, we explore Chebyshev Polynomials, a sequence of orthogonal polynomials that play a crucial role in approximation theory and numerical analysis. They are particularly important for minimizing interpolation error."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/index.html#introduction",
+    "href": "posts/scientific-computing-03/index.html#introduction",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "",
+    "text": "In this session of Scientific Computing, we explore Chebyshev Polynomials, a sequence of orthogonal polynomials that play a crucial role in approximation theory and numerical analysis. They are particularly important for minimizing interpolation error."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/index.html#definition",
+    "href": "posts/scientific-computing-03/index.html#definition",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Definition",
+    "text": "Definition\nThe Chebyshev polynomial of degree \\(n\\), denoted as \\(T_n(x)\\), is defined for \\(x \\in [-1, 1]\\) by the formula:\n\\[\nT_n(x) = \\cos(n \\cos^{-1}(x)), \\quad n \\ge 0\n\\]"
+  },
+  {
+    "objectID": "posts/scientific-computing-03/index.html#key-properties",
+    "href": "posts/scientific-computing-03/index.html#key-properties",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Key Properties",
+    "text": "Key Properties\nChebyshev polynomials exhibit several interesting and useful properties:\n\nRecurrence Relation: \\[\nT_{n+1}(x) = 2x T_n(x) - T_{n-1}(x), \\quad n \\ge 1\n\\] with initial conditions \\(T_0(x) = 1\\) and \\(T_1(x) = x\\).\nLeading Coefficient: The leading coefficient of \\(T_n(x)\\) is \\(2^{n-1}\\) for \\(n \\ge 1\\).\nSymmetry:\n\nIf \\(n\\) is even, \\(T_n(x)\\) is an even function.\nIf \\(n\\) is odd, \\(T_n(x)\\) is an odd function.\n\nRoots: The roots of \\(T_n(x)\\) are real, distinct, and lie in \\((-1, 1)\\). They are given by: \\[\nx_j = \\cos\\left(\\frac{2j-1}{2n}\\pi\\right), \\quad j = 1, 2, \\dots, n\n\\]\nExtrema: The absolute value of \\(T_n(x)\\) is bounded by 1 on \\([-1, 1]\\): \\[\n|T_n(x)| \\le 1\n\\] The extrema occur at \\(n+1\\) points: \\[\nx_k = \\cos\\left(\\frac{k\\pi}{n}\\right), \\quad k = 0, 1, \\dots, n\n\\] At these points, \\(T_n(x_k) = (-1)^k\\)."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/index.html#first-few-polynomials",
+    "href": "posts/scientific-computing-03/index.html#first-few-polynomials",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "First Few Polynomials",
+    "text": "First Few Polynomials\nUsing the recurrence relation, we can derive the first few polynomials:\n\n\\(T_0(x) = 1\\)\n\\(T_1(x) = x\\)\n\\(T_2(x) = 2x^2 - 1\\)\n\\(T_3(x) = 4x^3 - 3x\\)"
+  },
+  {
+    "objectID": "posts/scientific-computing-03/index.html#minimax-property",
+    "href": "posts/scientific-computing-03/index.html#minimax-property",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Minimax Property",
+    "text": "Minimax Property\nOne of the most significant properties of Chebyshev polynomials is related to polynomial approximation.\nTheorem: Among all monic polynomials \\(P_n(x)\\) of degree \\(n\\) (polynomials with leading coefficient 1), the one that has the smallest maximum absolute value on \\([-1, 1]\\) is:\n\\[\n\\frac{1}{2^{n-1}} T_n(x)\n\\]\nThis property is fundamental in minimax approximation."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/index.html#application-in-interpolation",
+    "href": "posts/scientific-computing-03/index.html#application-in-interpolation",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Application in Interpolation",
+    "text": "Application in Interpolation\nWhen interpolating a function \\(f(x)\\) by a polynomial \\(P_n(x)\\) of degree \\(n\\) at nodes \\(x_0, \\dots, x_n\\), the error is given by:\n\\[\nf(x) - P_n(x) = \\frac{f^{(n+1)}(\\xi)}{(n+1)!} \\prod_{i=0}^n (x - x_i)\n\\]\nTo minimize the error bound, we need to minimize the term \\(|\\prod_{i=0}^n (x - x_i)|\\). This is achieved by choosing the interpolation nodes \\(x_i\\) to be the roots of the Chebyshev polynomial \\(T_{n+1}(x)\\).\n\nExample\nConsider approximating \\(f(x) = \\sin(\\frac{\\pi}{2}x)\\) on \\([-1, 1]\\). Using Chebyshev nodes significantly reduces the maximum error compared to using equidistant nodes."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/index.html#summary",
+    "href": "posts/scientific-computing-03/index.html#summary",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Summary",
+    "text": "Summary\nChebyshev polynomials provide an optimal way to choose interpolation points to minimize the worst-case error (Runge’s phenomenon). They are a cornerstone of approximation theory."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/scicomp-03-slides.html#introduction",
+    "href": "posts/scientific-computing-03/scicomp-03-slides.html#introduction",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Introduction",
+    "text": "Introduction\nIn this session of Scientific Computing, we explore Chebyshev Polynomials, a sequence of orthogonal polynomials that play a crucial role in approximation theory and numerical analysis. They are particularly important for minimizing interpolation error."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/scicomp-03-slides.html#definition",
+    "href": "posts/scientific-computing-03/scicomp-03-slides.html#definition",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Definition",
+    "text": "Definition\nThe Chebyshev polynomial of degree \\(n\\), denoted as \\(T_n(x)\\), is defined for \\(x \\in [-1, 1]\\) by the formula:\n\\[\nT_n(x) = \\cos(n \\cos^{-1}(x)), \\quad n \\ge 0\n\\]"
+  },
+  {
+    "objectID": "posts/scientific-computing-03/scicomp-03-slides.html#key-properties",
+    "href": "posts/scientific-computing-03/scicomp-03-slides.html#key-properties",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Key Properties",
+    "text": "Key Properties\nChebyshev polynomials exhibit several interesting and useful properties:\n\nRecurrence Relation: \\[\nT_{n+1}(x) = 2x T_n(x) - T_{n-1}(x), \\quad n \\ge 1\n\\] with initial conditions \\(T_0(x) = 1\\) and \\(T_1(x) = x\\).\nLeading Coefficient: The leading coefficient of \\(T_n(x)\\) is \\(2^{n-1}\\) for \\(n \\ge 1\\).\nSymmetry:\n\nIf \\(n\\) is even, \\(T_n(x)\\) is an even function.\nIf \\(n\\) is odd, \\(T_n(x)\\) is an odd function.\n\nRoots: The roots of \\(T_n(x)\\) are real, distinct, and lie in \\((-1, 1)\\). They are given by: \\[\nx_j = \\cos\\left(\\frac{2j-1}{2n}\\pi\\right), \\quad j = 1, 2, \\dots, n\n\\]\nExtrema: The absolute value of \\(T_n(x)\\) is bounded by 1 on \\([-1, 1]\\): \\[\n|T_n(x)| \\le 1\n\\] The extrema occur at \\(n+1\\) points: \\[\nx_k = \\cos\\left(\\frac{k\\pi}{n}\\right), \\quad k = 0, 1, \\dots, n\n\\] At these points, \\(T_n(x_k) = (-1)^k\\)."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/scicomp-03-slides.html#first-few-polynomials",
+    "href": "posts/scientific-computing-03/scicomp-03-slides.html#first-few-polynomials",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "First Few Polynomials",
+    "text": "First Few Polynomials\nUsing the recurrence relation, we can derive the first few polynomials:\n\n\\(T_0(x) = 1\\)\n\\(T_1(x) = x\\)\n\\(T_2(x) = 2x^2 - 1\\)\n\\(T_3(x) = 4x^3 - 3x\\)"
+  },
+  {
+    "objectID": "posts/scientific-computing-03/scicomp-03-slides.html#minimax-property",
+    "href": "posts/scientific-computing-03/scicomp-03-slides.html#minimax-property",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Minimax Property",
+    "text": "Minimax Property\nOne of the most significant properties of Chebyshev polynomials is related to polynomial approximation.\nTheorem: Among all monic polynomials \\(P_n(x)\\) of degree \\(n\\) (polynomials with leading coefficient 1), the one that has the smallest maximum absolute value on \\([-1, 1]\\) is:\n\\[\n\\frac{1}{2^{n-1}} T_n(x)\n\\]\nThis property is fundamental in minimax approximation."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/scicomp-03-slides.html#application-in-interpolation",
+    "href": "posts/scientific-computing-03/scicomp-03-slides.html#application-in-interpolation",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Application in Interpolation",
+    "text": "Application in Interpolation\nWhen interpolating a function \\(f(x)\\) by a polynomial \\(P_n(x)\\) of degree \\(n\\) at nodes \\(x_0, \\dots, x_n\\), the error is given by:\n\\[\nf(x) - P_n(x) = \\frac{f^{(n+1)}(\\xi)}{(n+1)!} \\prod_{i=0}^n (x - x_i)\n\\]\nTo minimize the error bound, we need to minimize the term \\(|\\prod_{i=0}^n (x - x_i)|\\). This is achieved by choosing the interpolation nodes \\(x_i\\) to be the roots of the Chebyshev polynomial \\(T_{n+1}(x)\\).\nExample\nConsider approximating \\(f(x) = \\sin(\\frac{\\pi}{2}x)\\) on \\([-1, 1]\\). Using Chebyshev nodes significantly reduces the maximum error compared to using equidistant nodes."
+  },
+  {
+    "objectID": "posts/scientific-computing-03/scicomp-03-slides.html#summary",
+    "href": "posts/scientific-computing-03/scicomp-03-slides.html#summary",
+    "title": "Scientific Computing - Session 3: Chebyshev Polynomials",
+    "section": "Summary",
+    "text": "Summary\nChebyshev polynomials provide an optimal way to choose interpolation points to minimize the worst-case error (Runge’s phenomenon). They are a cornerstone of approximation theory."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yahya Izadi",
+    "section": "",
+    "text": "Java Lab Session 1: Introduction to Java Programming\n\n\n\njava\n\nprogramming\n\nlab\n\n\n\n\n\n\n\n\n\nNov 19, 2025\n\n\nYahya Izadi\n\n\n\n\n\n\n\n\n\n\n\n\nScientific Computing - Session 3: Chebyshev Polynomials\n\n\n\nscientific computing\n\nnumerical analysis\n\napproximation theory\n\nchebyshev\n\n\n\n\n\n\n\n\n\nNov 19, 2025\n\n\nYahya Izadi\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#introduction",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#introduction",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Introduction",
+    "text": "Introduction\nIn this session, we’ll cover the fundamentals of Java programming and get started with writing our first Java programs."
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#setup-and-installation",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#setup-and-installation",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Setup and Installation",
+    "text": "Setup and Installation\nTo start working with Java, you need to install the JDK (Java Development Kit):\n\nDownload JDK from Oracle’s website\nInstall JDK on your system\nConfigure environment variables (JAVA_HOME, PATH)"
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#your-first-java-program",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#your-first-java-program",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Your First Java Program",
+    "text": "Your First Java Program\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\nCode Explanation\n\npublic class HelloWorld: Defines a public class named HelloWorld\npublic static void main(String[] args): The main method - entry point of the program\nSystem.out.println(): Prints output to the console"
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#compiling-and-running",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#compiling-and-running",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Compiling and Running",
+    "text": "Compiling and Running\nTo compile and run your program:\njavac HelloWorld.java\njava HelloWorld"
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#data-types-in-java",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#data-types-in-java",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Data Types in Java",
+    "text": "Data Types in Java\nPrimitive Data Types\n// Integer types\nint age = 25;\nlong population = 7000000000L;\n\n// Floating-point types\nfloat price = 19.99f;\ndouble pi = 3.14159265359;\n\n// Character type\nchar grade = 'A';\n\n// Boolean type\nboolean isStudent = true;\nReference Types\nString name = \"John Doe\";\nString[] courses = {\"Java\", \"Python\", \"C++\"};"
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#operators",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#operators",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Operators",
+    "text": "Operators\nArithmetic Operators\nint a = 10;\nint b = 3;\n\nint sum = a + b;      // Addition: 13\nint diff = a - b;     // Subtraction: 7\nint product = a * b;  // Multiplication: 30\nint quotient = a / b; // Division: 3\nint remainder = a % b; // Modulus: 1\nComparison Operators\nint x = 5;\nint y = 10;\n\nboolean isEqual = (x == y);        // false\nboolean isNotEqual = (x != y);     // true\nboolean isGreater = (x &gt; y);       // false\nboolean isLess = (x &lt; y);          // true"
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#control-flow-statements",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#control-flow-statements",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Control Flow Statements",
+    "text": "Control Flow Statements\nif-else Statement\nint score = 85;\n\nif (score &gt;= 90) {\n    System.out.println(\"Excellent\");\n} else if (score &gt;= 70) {\n    System.out.println(\"Good\");\n} else {\n    System.out.println(\"Pass\");\n}\nfor Loop\nfor (int i = 1; i &lt;= 5; i++) {\n    System.out.println(\"Number: \" + i);\n}\nwhile Loop\nint count = 0;\nwhile (count &lt; 5) {\n    System.out.println(\"Count: \" + count);\n    count++;\n}"
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#lab-exercises",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#lab-exercises",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Lab Exercises",
+    "text": "Lab Exercises\n\nWrite a program that takes two numbers from the user and prints their sum\nWrite a program that checks if a number is even or odd\nWrite a program that prints numbers from 1 to 10"
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#summary",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#summary",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Summary",
+    "text": "Summary\nIn this session, we covered:\n\nStructure of a Java program\nData types (primitive and reference)\nOperators (arithmetic and comparison)\nControl flow statements (if-else, for, while)"
+  },
+  {
+    "objectID": "posts/java-lab-1/java-lab-1-slides.html#resources",
+    "href": "posts/java-lab-1/java-lab-1-slides.html#resources",
+    "title": "Java Lab Session 1: Introduction to Java Programming",
+    "section": "Resources",
+    "text": "Resources\n\nOfficial Java Documentation\nJava Tutorial - W3Schools\nJava Programming Tutorial"
+  },
+  {
     "objectID": "posts/java-lab-1/index.html",
     "href": "posts/java-lab-1/index.html",
     "title": "Java Lab Session 1: Introduction to Java Programming",
@@ -75,89 +264,5 @@
     "title": "Java Lab Session 1: Introduction to Java Programming",
     "section": "Resources",
     "text": "Resources\n\nOfficial Java Documentation\nJava Tutorial - W3Schools\nJava Programming Tutorial"
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#introduction",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#introduction",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Introduction",
-    "text": "Introduction\nIn this session, we’ll cover the fundamentals of Java programming and get started with writing our first Java programs."
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#setup-and-installation",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#setup-and-installation",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Setup and Installation",
-    "text": "Setup and Installation\nTo start working with Java, you need to install the JDK (Java Development Kit):\n\nDownload JDK from Oracle’s website\nInstall JDK on your system\nConfigure environment variables (JAVA_HOME, PATH)"
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#your-first-java-program",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#your-first-java-program",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Your First Java Program",
-    "text": "Your First Java Program\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\nCode Explanation\n\npublic class HelloWorld: Defines a public class named HelloWorld\npublic static void main(String[] args): The main method - entry point of the program\nSystem.out.println(): Prints output to the console"
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#compiling-and-running",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#compiling-and-running",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Compiling and Running",
-    "text": "Compiling and Running\nTo compile and run your program:\njavac HelloWorld.java\njava HelloWorld"
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#data-types-in-java",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#data-types-in-java",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Data Types in Java",
-    "text": "Data Types in Java\nPrimitive Data Types\n// Integer types\nint age = 25;\nlong population = 7000000000L;\n\n// Floating-point types\nfloat price = 19.99f;\ndouble pi = 3.14159265359;\n\n// Character type\nchar grade = 'A';\n\n// Boolean type\nboolean isStudent = true;\nReference Types\nString name = \"John Doe\";\nString[] courses = {\"Java\", \"Python\", \"C++\"};"
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#operators",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#operators",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Operators",
-    "text": "Operators\nArithmetic Operators\nint a = 10;\nint b = 3;\n\nint sum = a + b;      // Addition: 13\nint diff = a - b;     // Subtraction: 7\nint product = a * b;  // Multiplication: 30\nint quotient = a / b; // Division: 3\nint remainder = a % b; // Modulus: 1\nComparison Operators\nint x = 5;\nint y = 10;\n\nboolean isEqual = (x == y);        // false\nboolean isNotEqual = (x != y);     // true\nboolean isGreater = (x &gt; y);       // false\nboolean isLess = (x &lt; y);          // true"
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#control-flow-statements",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#control-flow-statements",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Control Flow Statements",
-    "text": "Control Flow Statements\nif-else Statement\nint score = 85;\n\nif (score &gt;= 90) {\n    System.out.println(\"Excellent\");\n} else if (score &gt;= 70) {\n    System.out.println(\"Good\");\n} else {\n    System.out.println(\"Pass\");\n}\nfor Loop\nfor (int i = 1; i &lt;= 5; i++) {\n    System.out.println(\"Number: \" + i);\n}\nwhile Loop\nint count = 0;\nwhile (count &lt; 5) {\n    System.out.println(\"Count: \" + count);\n    count++;\n}"
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#lab-exercises",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#lab-exercises",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Lab Exercises",
-    "text": "Lab Exercises\n\nWrite a program that takes two numbers from the user and prints their sum\nWrite a program that checks if a number is even or odd\nWrite a program that prints numbers from 1 to 10"
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#summary",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#summary",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Summary",
-    "text": "Summary\nIn this session, we covered:\n\nStructure of a Java program\nData types (primitive and reference)\nOperators (arithmetic and comparison)\nControl flow statements (if-else, for, while)"
-  },
-  {
-    "objectID": "posts/java-lab-1/java-lab-1-slides.html#resources",
-    "href": "posts/java-lab-1/java-lab-1-slides.html#resources",
-    "title": "Java Lab Session 1: Introduction to Java Programming",
-    "section": "Resources",
-    "text": "Resources\n\nOfficial Java Documentation\nJava Tutorial - W3Schools\nJava Programming Tutorial"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Yahya Izadi",
-    "section": "",
-    "text": "Java Lab Session 1: Introduction to Java Programming\n\n\n\njava\n\nprogramming\n\nlab\n\n\n\n\n\n\n\n\n\nNov 19, 2025\n\n\nYahya Izadi\n\n\n\n\n\nNo matching items"
   }
 ]

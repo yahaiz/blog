@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yahaiz.github.io/blog/posts/java-lab-1/index.html</loc>
-    <lastmod>2025-11-18T23:10:27.543Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/posts/scientific-computing-03/index.html</loc>
+    <lastmod>2025-11-18T23:29:40.386Z</lastmod>
   </url>
   <url>
-    <loc>https://yahaiz.github.io/blog/posts/java-lab-1/java-lab-1-slides.html</loc>
-    <lastmod>2025-11-18T23:10:27.543Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/posts/scientific-computing-03/scicomp-03-slides.html</loc>
+    <lastmod>2025-11-18T23:29:40.386Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yahaiz.github.io/blog/index.html</loc>
+    <lastmod>2025-11-18T22:44:42.125Z</lastmod>
   </url>
   <url>
     <loc>https://yahaiz.github.io/blog/about.html</loc>
     <lastmod>2025-11-18T09:24:13.380Z</lastmod>
   </url>
   <url>
-    <loc>https://yahaiz.github.io/blog/index.html</loc>
-    <lastmod>2025-11-18T22:44:42.125Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/posts/java-lab-1/java-lab-1-slides.html</loc>
+    <lastmod>2025-11-18T23:26:36.522Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yahaiz.github.io/blog/posts/java-lab-1/index.html</loc>
+    <lastmod>2025-11-18T23:26:36.522Z</lastmod>
   </url>
 </urlset>

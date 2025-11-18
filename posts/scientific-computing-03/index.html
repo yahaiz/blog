@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Yahya Izadi">
+<meta name="dcterms.date" content="2025-11-19">
 
-<title>Yahya Izadi</title>
+<title>Scientific Computing - Session 3: Chebyshev Polynomials – Yahya Izadi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,30 +25,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fc7cc9eb68d4cc25b4f77f3bdca4ebaa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-fc7cc9eb68d4cc25b4f77f3bdca4ebaa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,35 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -134,9 +105,9 @@ window.Quarto = {
 };
 </script>
 
-<link rel="alternate" type="application/rss+xml" title="Yahya Izadi" href="index.xml" data-external="1"></head>
+</head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -305,7 +276,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Yahya Izadi</span>
     </a>
   </div>
@@ -316,7 +287,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -338,115 +309,145 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Yahya Izadi</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Scientific Computing - Session 3: Chebyshev Polynomials</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">scientific computing</div>
+                <div class="quarto-category">numerical analysis</div>
+                <div class="quarto-category">approximation theory</div>
+                <div class="quarto-category">chebyshev</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Yahya Izadi </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 19, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#key-properties" id="toc-key-properties" class="nav-link" data-scroll-target="#key-properties">Key Properties</a></li>
+  <li><a href="#first-few-polynomials" id="toc-first-few-polynomials" class="nav-link" data-scroll-target="#first-few-polynomials">First Few Polynomials</a></li>
+  <li><a href="#minimax-property" id="toc-minimax-property" class="nav-link" data-scroll-target="#minimax-property">Minimax Property</a></li>
+  <li><a href="#application-in-interpolation" id="toc-application-in-interpolation" class="nav-link" data-scroll-target="#application-in-interpolation">Application in Interpolation</a>
+  <ul class="collapse">
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="scicomp-03.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="scicomp-03-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YXBwcm94aW1hdGlvbiUyMHRoZW9yeQ==">approximation theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2hlYnlzaGV2">chebyshev <span class="quarto-category-count">(1)</span></div><div class="category" data-category="amF2YQ==">java <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGFi">lab <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bnVtZXJpY2FsJTIwYW5hbHlzaXM=">numerical analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvZ3JhbW1pbmc=">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2NpZW50aWZpYyUyMGNvbXB1dGluZw==">scientific computing <span class="quarto-category-count">(1)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this session of Scientific Computing, we explore <strong>Chebyshev Polynomials</strong>, a sequence of orthogonal polynomials that play a crucial role in approximation theory and numerical analysis. They are particularly important for minimizing interpolation error.</p>
+</section>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>The Chebyshev polynomial of degree <span class="math inline">\(n\)</span>, denoted as <span class="math inline">\(T_n(x)\)</span>, is defined for <span class="math inline">\(x \in [-1, 1]\)</span> by the formula:</p>
+<p><span class="math display">\[
+T_n(x) = \cos(n \cos^{-1}(x)), \quad n \ge 0
+\]</span></p>
+</section>
+<section id="key-properties" class="level2">
+<h2 class="anchored" data-anchor-id="key-properties">Key Properties</h2>
+<p>Chebyshev polynomials exhibit several interesting and useful properties:</p>
+<ol type="1">
+<li><p><strong>Recurrence Relation</strong>: <span class="math display">\[
+T_{n+1}(x) = 2x T_n(x) - T_{n-1}(x), \quad n \ge 1
+\]</span> with initial conditions <span class="math inline">\(T_0(x) = 1\)</span> and <span class="math inline">\(T_1(x) = x\)</span>.</p></li>
+<li><p><strong>Leading Coefficient</strong>: The leading coefficient of <span class="math inline">\(T_n(x)\)</span> is <span class="math inline">\(2^{n-1}\)</span> for <span class="math inline">\(n \ge 1\)</span>.</p></li>
+<li><p><strong>Symmetry</strong>:</p>
+<ul>
+<li>If <span class="math inline">\(n\)</span> is even, <span class="math inline">\(T_n(x)\)</span> is an even function.</li>
+<li>If <span class="math inline">\(n\)</span> is odd, <span class="math inline">\(T_n(x)\)</span> is an odd function.</li>
+</ul></li>
+<li><p><strong>Roots</strong>: The roots of <span class="math inline">\(T_n(x)\)</span> are real, distinct, and lie in <span class="math inline">\((-1, 1)\)</span>. They are given by: <span class="math display">\[
+x_j = \cos\left(\frac{2j-1}{2n}\pi\right), \quad j = 1, 2, \dots, n
+\]</span></p></li>
+<li><p><strong>Extrema</strong>: The absolute value of <span class="math inline">\(T_n(x)\)</span> is bounded by 1 on <span class="math inline">\([-1, 1]\)</span>: <span class="math display">\[
+|T_n(x)| \le 1
+\]</span> The extrema occur at <span class="math inline">\(n+1\)</span> points: <span class="math display">\[
+x_k = \cos\left(\frac{k\pi}{n}\right), \quad k = 0, 1, \dots, n
+\]</span> At these points, <span class="math inline">\(T_n(x_k) = (-1)^k\)</span>.</p></li>
+</ol>
+</section>
+<section id="first-few-polynomials" class="level2">
+<h2 class="anchored" data-anchor-id="first-few-polynomials">First Few Polynomials</h2>
+<p>Using the recurrence relation, we can derive the first few polynomials:</p>
+<ul>
+<li><span class="math inline">\(T_0(x) = 1\)</span></li>
+<li><span class="math inline">\(T_1(x) = x\)</span></li>
+<li><span class="math inline">\(T_2(x) = 2x^2 - 1\)</span></li>
+<li><span class="math inline">\(T_3(x) = 4x^3 - 3x\)</span></li>
+</ul>
+</section>
+<section id="minimax-property" class="level2">
+<h2 class="anchored" data-anchor-id="minimax-property">Minimax Property</h2>
+<p>One of the most significant properties of Chebyshev polynomials is related to polynomial approximation.</p>
+<p><strong>Theorem</strong>: Among all monic polynomials <span class="math inline">\(P_n(x)\)</span> of degree <span class="math inline">\(n\)</span> (polynomials with leading coefficient 1), the one that has the smallest maximum absolute value on <span class="math inline">\([-1, 1]\)</span> is:</p>
+<p><span class="math display">\[
+\frac{1}{2^{n-1}} T_n(x)
+\]</span></p>
+<p>This property is fundamental in <strong>minimax approximation</strong>.</p>
+</section>
+<section id="application-in-interpolation" class="level2">
+<h2 class="anchored" data-anchor-id="application-in-interpolation">Application in Interpolation</h2>
+<p>When interpolating a function <span class="math inline">\(f(x)\)</span> by a polynomial <span class="math inline">\(P_n(x)\)</span> of degree <span class="math inline">\(n\)</span> at nodes <span class="math inline">\(x_0, \dots, x_n\)</span>, the error is given by:</p>
+<p><span class="math display">\[
+f(x) - P_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!} \prod_{i=0}^n (x - x_i)
+\]</span></p>
+<p>To minimize the error bound, we need to minimize the term <span class="math inline">\(|\prod_{i=0}^n (x - x_i)|\)</span>. This is achieved by choosing the interpolation nodes <span class="math inline">\(x_i\)</span> to be the roots of the Chebyshev polynomial <span class="math inline">\(T_{n+1}(x)\)</span>.</p>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Consider approximating <span class="math inline">\(f(x) = \sin(\frac{\pi}{2}x)\)</span> on <span class="math inline">\([-1, 1]\)</span>. Using Chebyshev nodes significantly reduces the maximum error compared to using equidistant nodes.</p>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>Chebyshev polynomials provide an optimal way to choose interpolation points to minimize the worst-case error (Runge’s phenomenon). They are a cornerstone of approximation theory.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="amF2YSUyQ3Byb2dyYW1taW5nJTJDbGFi" data-listing-date-sort="1763497800000" data-listing-file-modified-sort="1763508396522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="429">
-<div class="thumbnail"><a href="./posts/java-lab-1/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/java-lab-1" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/java-lab-1/index.html" class="no-external">Java Lab Session 1: Introduction to Java Programming</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('amF2YQ=='); return false;">java</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZ3JhbW1pbmc='); return false;">programming</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/java-lab-1/index.html" class="no-external">
-In this session, we’ll cover the fundamentals of Java programming and get started with writing our first Java programs.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/java-lab-1/index.html" class="no-external">
-<div class="listing-date">
-Nov 19, 2025
-</div>
-<div class="listing-author">
-Yahya Izadi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="c2NpZW50aWZpYyUyMGNvbXB1dGluZyUyQ251bWVyaWNhbCUyMGFuYWx5c2lzJTJDYXBwcm94aW1hdGlvbiUyMHRoZW9yeSUyQ2NoZWJ5c2hldg==" data-listing-date-sort="1763497800000" data-listing-file-modified-sort="1763508580386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="448">
-<div class="thumbnail"><a href="./posts/scientific-computing-03/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/scientific-computing-03" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/scientific-computing-03/index.html" class="no-external">Scientific Computing - Session 3: Chebyshev Polynomials</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2NpZW50aWZpYyUyMGNvbXB1dGluZw=='); return false;">scientific computing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bnVtZXJpY2FsJTIwYW5hbHlzaXM='); return false;">numerical analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXBwcm94aW1hdGlvbiUyMHRoZW9yeQ=='); return false;">approximation theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hlYnlzaGV2'); return false;">chebyshev</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/scientific-computing-03/index.html" class="no-external">
-In this session of Scientific Computing, we explore <strong>Chebyshev Polynomials</strong>, a sequence of orthogonal polynomials that play a crucial role in approximation theory and…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/scientific-computing-03/index.html" class="no-external">
-<div class="listing-date">
-Nov 19, 2025
-</div>
-<div class="listing-author">
-Yahya Izadi
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
