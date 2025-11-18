@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "posts/python-basics/index.html",
+    "href": "posts/python-basics/index.html",
+    "title": "Getting Started with Python: A Beginner’s Guide",
+    "section": "",
+    "text": "Python is one of the most popular programming languages in the world, known for its simplicity and versatility. Whether you’re interested in web development, data science, or automation, Python is an excellent choice to start your programming journey."
+  },
+  {
+    "objectID": "posts/python-basics/index.html#introduction",
+    "href": "posts/python-basics/index.html#introduction",
+    "title": "Getting Started with Python: A Beginner’s Guide",
+    "section": "",
+    "text": "Python is one of the most popular programming languages in the world, known for its simplicity and versatility. Whether you’re interested in web development, data science, or automation, Python is an excellent choice to start your programming journey."
+  },
+  {
+    "objectID": "posts/python-basics/index.html#why-python",
+    "href": "posts/python-basics/index.html#why-python",
+    "title": "Getting Started with Python: A Beginner’s Guide",
+    "section": "Why Python?",
+    "text": "Why Python?\nPython offers several advantages for beginners:\n\nEasy to Learn: Clean and readable syntax\nVersatile: Used in web development, data science, AI, and more\nLarge Community: Extensive libraries and support\nHigh Demand: Popular in the job market"
+  },
+  {
+    "objectID": "posts/python-basics/index.html#basic-python-syntax",
+    "href": "posts/python-basics/index.html#basic-python-syntax",
+    "title": "Getting Started with Python: A Beginner’s Guide",
+    "section": "Basic Python Syntax",
+    "text": "Basic Python Syntax\nLet’s explore some fundamental Python concepts.\n\nVariables and Data Types\n\n# Variables in Python\nname = \"Alice\"\nage = 25\nheight = 5.6\nis_student = True\n\nprint(f\"Name: {name}, Age: {age}\")\n\nName: Alice, Age: 25\n\n\n\n\nLists and Loops\n\n# Working with lists\nfruits = [\"apple\", \"banana\", \"orange\", \"grape\"]\n\nfor fruit in fruits:\n    print(f\"I like {fruit}s\")\n\nI like apples\nI like bananas\nI like oranges\nI like grapes\n\n\n\n\nFunctions\n\n# Defining a simple function\ndef greet(name):\n    return f\"Hello, {name}! Welcome to Python programming.\"\n\n# Calling the function\nmessage = greet(\"Sarah\")\nprint(message)\n\nHello, Sarah! Welcome to Python programming."
+  },
+  {
+    "objectID": "posts/python-basics/index.html#practical-example-data-analysis",
+    "href": "posts/python-basics/index.html#practical-example-data-analysis",
+    "title": "Getting Started with Python: A Beginner’s Guide",
+    "section": "Practical Example: Data Analysis",
+    "text": "Practical Example: Data Analysis\nLet’s see how Python can be used for basic data analysis:\n\n# Simple data analysis\nnumbers = [12, 45, 23, 67, 34, 89, 15]\n\naverage = sum(numbers) / len(numbers)\nmaximum = max(numbers)\nminimum = min(numbers)\n\nprint(f\"Average: {average:.2f}\")\nprint(f\"Maximum: {maximum}\")\nprint(f\"Minimum: {minimum}\")\n\nAverage: 40.71\nMaximum: 89\nMinimum: 12"
+  },
+  {
+    "objectID": "posts/python-basics/index.html#conclusion",
+    "href": "posts/python-basics/index.html#conclusion",
+    "title": "Getting Started with Python: A Beginner’s Guide",
+    "section": "Conclusion",
+    "text": "Conclusion\nPython’s simplicity and power make it an ideal language for beginners and experienced developers alike. This is just the beginning – there’s so much more to explore!\n\n\n\n\n\n\nTipNext Steps\n\n\n\nTry modifying the code examples above and experiment with your own variations. The best way to learn Python is by writing code!\n\n\n\n\n\n\n\n\nNoteResources\n\n\n\nCheck out Python.org for official documentation and tutorials."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yahya Izadi",
+    "section": "",
+    "text": "Getting Started with Python: A Beginner’s Guide\n\n\n\npython\n\nprogramming\n\ntutorial\n\n\n\n\n\n\n\n\n\nNov 18, 2025\n\n\nYahya Izadi\n\n\n\n\n\n\n\n\n\n\n\n\nPost Title\n\n\n\ncategory1\n\ncategory2\n\n\n\n\n\n\n\n\n\nNov 17, 2025\n\n\nYahya Izadi\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/post-template/index.html",
+    "href": "posts/post-template/index.html",
+    "title": "Post Title",
+    "section": "",
+    "text": "Write your introduction here."
+  },
+  {
+    "objectID": "posts/post-template/index.html#introduction",
+    "href": "posts/post-template/index.html#introduction",
+    "title": "Post Title",
+    "section": "",
+    "text": "Write your introduction here."
+  },
+  {
+    "objectID": "posts/post-template/index.html#main-content",
+    "href": "posts/post-template/index.html#main-content",
+    "title": "Post Title",
+    "section": "Main Content",
+    "text": "Main Content\nYour main content goes here.\n\nSubsection\nMore details."
+  },
+  {
+    "objectID": "posts/post-template/index.html#code-example",
+    "href": "posts/post-template/index.html#code-example",
+    "title": "Post Title",
+    "section": "Code Example",
+    "text": "Code Example\n# Add your code here\nprint(\"Hello, World!\")"
+  },
+  {
+    "objectID": "posts/post-template/index.html#conclusion",
+    "href": "posts/post-template/index.html#conclusion",
+    "title": "Post Title",
+    "section": "Conclusion",
+    "text": "Conclusion\nWrap up your post here.\n\n\n\n\n\n\nTipTip\n\n\n\nAdd helpful tips using callout blocks."
+  }
+]
