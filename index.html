@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -359,7 +359,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YXBwcm94aW1hdGlvbiUyMHRoZW9yeQ==">approximation theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2hlYnlzaGV2">chebyshev <span class="quarto-category-count">(1)</span></div><div class="category" data-category="amF2YQ==">java <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGFi">lab <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bnVtZXJpY2FsJTIwYW5hbHlzaXM=">numerical analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvZ3JhbW1pbmc=">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2NpZW50aWZpYyUyMGNvbXB1dGluZw==">scientific computing <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -374,76 +374,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="amF2YSUyQ3Byb2dyYW1taW5nJTJDbGFi" data-listing-date-sort="1763497800000" data-listing-file-modified-sort="1763508396522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="429">
-<div class="thumbnail"><a href="./posts/java-lab-1/index.html" class="no-external">
 
-<img loading="lazy" src="./posts/java-lab-1" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/java-lab-1/index.html" class="no-external">Java Lab Session 1: Introduction to Java Programming</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('amF2YQ=='); return false;">java</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZ3JhbW1pbmc='); return false;">programming</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/java-lab-1/index.html" class="no-external">
-In this session, we’ll cover the fundamentals of Java programming and get started with writing our first Java programs.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/java-lab-1/index.html" class="no-external">
-<div class="listing-date">
-Nov 19, 2025
-</div>
-<div class="listing-author">
-Yahya Izadi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="c2NpZW50aWZpYyUyMGNvbXB1dGluZyUyQ251bWVyaWNhbCUyMGFuYWx5c2lzJTJDYXBwcm94aW1hdGlvbiUyMHRoZW9yeSUyQ2NoZWJ5c2hldg==" data-listing-date-sort="1763497800000" data-listing-file-modified-sort="1763508580386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="448">
-<div class="thumbnail"><a href="./posts/scientific-computing-03/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/scientific-computing-03" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/scientific-computing-03/index.html" class="no-external">Scientific Computing - Session 3: Chebyshev Polynomials</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2NpZW50aWZpYyUyMGNvbXB1dGluZw=='); return false;">scientific computing</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bnVtZXJpY2FsJTIwYW5hbHlzaXM='); return false;">numerical analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXBwcm94aW1hdGlvbiUyMHRoZW9yeQ=='); return false;">approximation theory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hlYnlzaGV2'); return false;">chebyshev</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/scientific-computing-03/index.html" class="no-external">
-In this session of Scientific Computing, we explore <strong>Chebyshev Polynomials</strong>, a sequence of orthogonal polynomials that play a crucial role in approximation theory and…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/scientific-computing-03/index.html" class="no-external">
-<div class="listing-date">
-Nov 19, 2025
-</div>
-<div class="listing-author">
-Yahya Izadi
-</div>
-</a>
-</div>
-</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
