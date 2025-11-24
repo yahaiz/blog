@@ -46,3 +46,5 @@ desktop.ini
 *.cache
 
 **/*.quarto_ipynb
+
+/.luarc.json

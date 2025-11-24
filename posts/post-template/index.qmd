@@ -1,11 +1,23 @@
 ---
 title: "Post Title"
-author: "Yahya Izadi"
-date: "2025-11-17"
-categories: [category1, category2]
-image: "image.jpg"
+subtitle: "Post Subtitle"
+author:
+  - "Yahya Izadi"
+date: "2025-01-01"
+categories: [Category1, Category2]
+image: "image.png"
+draft: true
 format:
-  quarto-purple-fox-html: default
+  quarto-purple-fox-html: 
+    toc: true
+    format-links:
+      - pdf
+  pdf:
+    toc: false
+    output-file: "post-name.pdf"
+  revealjs:
+    theme: simple
+    output-file: "post-name-slides.html"
 ---
 
 ## Introduction

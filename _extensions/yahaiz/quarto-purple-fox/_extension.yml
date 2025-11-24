@@ -10,8 +10,8 @@ contributes:
       code-fold: false
       code-tools: false
       theme:
-        light: [Cosmo, custom.scss]
-        dark: [SuperHero, custom.scss]
+        light: [cosmo, custom.scss]
+        dark: [darkly, custom.scss]
       theme-toggle: true
       filters:
         - obsidian-callouts.lua

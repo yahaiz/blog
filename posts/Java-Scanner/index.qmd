@@ -1,0 +1,129 @@
+---
+title: "Java Scanner: The Ultimate Beginner's Guide"
+subtitle: "How to make your Java programs listen to the user"
+author:
+  - "Yahya Izadi"
+  - "Pooyan Motamedi"
+date: "2025-11-24"
+categories: [Java, Programming, Beginners, Tutorial]
+image: "java-scanner.png"
+draft: false
+format:
+  quarto-purple-fox-html: 
+    toc: true
+    format-links:
+      - pdf
+  pdf:
+    toc: false
+    output-file: "java-scanner.pdf"
+  revealjs:
+    theme: simple
+    output-file: "java-scanner-slides.html"
+---
+
+## Introduction: The Scanner Machine
+
+By default, the variables you write in code are fixed. But what if we want to ask the user for the numbers?
+
+Think of the **Scanner** like a physical scanner machine in an office.
+Usually, when you put a paper in a physical scanner, it scans the **entire** page at once.
+
+In Java, our Scanner is a bit different. It looks at what the user types on the keyboard, but we can be very specific about **what** to scan. We can tell it: *"Only scan the next number (int)"* or *"Only scan the next decimal point (float)."*
+
+---
+
+## The 3 Steps
+
+To use the Scanner, follow these three steps.
+
+### Step 1: The Import Line
+
+Java hides the Scanner tool in a specific library. You need to tell Java where to find it.
+Put this line at the **very top** of your file.
+
+```java
+import java.util.Scanner;
+```
+
+### Step 2: Turn on the Scanner
+
+Inside your code (in the `main` section), you need to write a specific line to set up the scanner.
+
+::: {.callout-note}
+
+## Note
+
+This line looks a bit complicated with keywords like `new` and `System.in`.
+**For now, please just accept this line as a rule.** Copy and paste it exactly as it is.
+:::
+
+```java
+// This line prepares the scanner to read from the keyboard
+Scanner input = new Scanner(System.in);
+```
+
+### Step 3: Scan the Data
+
+Now, you command the scanner to wait for the user to type something and store it in a variable.
+
+```java
+int age = input.nextInt();
+```
+
+-----
+
+## Cheat Sheet: Which Command to Use?
+
+Depending on the **Data Type** (variable) you want to fill, you must use a specific command.
+
+| Data Type | Command | Example Use Case |
+| :--- | :--- | :--- |
+| `int` | `input.nextInt()` | Whole numbers (Age, Year) |
+| `long` | `input.nextLong()` | Large whole numbers (Population) |
+| `float` | `input.nextFloat()` | Decimal numbers (Temperature) |
+| `double` | `input.nextDouble()` | Decimal numbers (Price, GPA) |
+| `boolean` | `input.nextBoolean()` | True/False answers |
+
+-----
+
+## 💻 Full Code Example
+
+Here is a complete program. It asks for a student's number and age.
+
+```java
+import java.util.Scanner; // Step 1
+
+public class Main {
+    public static void main(String[] args) {
+    
+        // Step 2: Setup the Scanner 
+        // (Remember: Just copy this line for now!)
+        Scanner input = new Scanner(System.in);
+
+        // Step 3: Ask and Scan
+        
+        // 1. Ask for an Integer
+        System.out.print("Enter your Student Number: ");
+        int studentNumber = input.nextInt();
+
+        // 2. Ask for an Integer
+        System.out.print("Enter your age: ");
+        int age = input.nextInt();
+
+        // Print the results back to see if it worked
+        System.out.println("--- Result ---");
+        System.out.println("Student Number: " + studentNumber);
+        System.out.println("Age: " + age);
+    }
+}
+```
+
+-----
+
+## Summary
+
+1.  **Import** the tool at the top: `import java.util.Scanner;`
+2.  **Setup** the tool inside main: `Scanner input = new Scanner(System.in);`
+3.  **Scan** the specific type you need: `nextInt()` or `nextDouble()`.
+
+Happy Coding\! 🚀
