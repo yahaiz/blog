@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Yahya Izadi",
     "section": "",
-    "text": "No matching items"
+    "text": "Java Scanner: The Ultimate Beginner’s Guide\n\n\nHow to make your Java programs listen to the user\n\n\n\nJava\n\nProgramming\n\nBeginners\n\nTutorial\n\n\n\n\n\n\n\n\n\nNov 24, 2025\n\n\nYahya Izadi, Pooyan Motamediquarto\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,82 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "posts/Java-Scanner/java-scanner-slides.html#introduction-making-your-code-listen",
+    "href": "posts/Java-Scanner/java-scanner-slides.html#introduction-making-your-code-listen",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "Introduction: Making Your Code “Listen”",
+    "text": "Introduction: Making Your Code “Listen”\nBy default, the Java code you write is “deaf.” It executes commands, does calculations, and prints results, but it cannot hear what the user wants to say.\nThe Scanner class is like a hearing aid or a translator. It allows your program to read input from the keyboard (Standard Input) and store it in variables."
+  },
+  {
+    "objectID": "posts/Java-Scanner/java-scanner-slides.html#the-3-golden-steps",
+    "href": "posts/Java-Scanner/java-scanner-slides.html#the-3-golden-steps",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "The 3 Golden Steps",
+    "text": "The 3 Golden Steps\nTo use the Scanner, you must always follow these three steps in order. Memorize this pattern!\nStep 1: Import the Tool\nJava keeps the Scanner in a utility package to keep things organized. You must import it at the very top of your file.\nimport java.util.Scanner;\nStep 2: Create the Scanner Object\nInside your main method, you need to create an instance of the Scanner. We usually call it input or scanner.\n// System.in represents the keyboard\nScanner input = new Scanner(System.in);\nStep 3: Read the Data\nNow, you command the scanner to wait for input and store it in a variable.\nint age = input.nextInt();"
+  },
+  {
+    "objectID": "posts/Java-Scanner/java-scanner-slides.html#cheat-sheet-which-command-to-use",
+    "href": "posts/Java-Scanner/java-scanner-slides.html#cheat-sheet-which-command-to-use",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "Cheat Sheet: Which Command to Use?",
+    "text": "Cheat Sheet: Which Command to Use?\nDepending on the Data Type you want to read, you must use a specific command (method).\n\n\n\nData Type\nMethod\nExample Use Case\n\n\n\n\nint\ninput.nextInt()\nAge, Year, Quantity\n\n\ndouble\ninput.nextDouble()\nPrice, GPA, Salary\n\n\nString\ninput.next()\nA single word (e.g., First Name)\n\n\nString\ninput.nextLine()\nA full sentence (e.g., Full Name)\n\n\nboolean\ninput.nextBoolean()\nTrue/False inputs"
+  },
+  {
+    "objectID": "posts/Java-Scanner/java-scanner-slides.html#full-code-example",
+    "href": "posts/Java-Scanner/java-scanner-slides.html#full-code-example",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "💻 Full Code Example",
+    "text": "💻 Full Code Example\nHere is a complete, runnable program. It asks for user details and prints them back.\nimport java.util.Scanner; // Step 1\n\npublic class Main {\n    public static void main(String[] args) {\n        // Step 2: Create the Scanner\n        Scanner input = new Scanner(System.in);\n\n        // Step 3: Ask and Read\n        System.out.print(\"Enter your age: \");\n        int age = input.nextInt();\n\n        System.out.print(\"Enter your GPA: \");\n        double gpa = input.nextDouble();\n\n        System.out.println(\"--- Result ---\");\n        System.out.println(\"Age: \" + age);\n        System.out.println(\"GPA: \" + gpa);\n    }\n}"
+  },
+  {
+    "objectID": "posts/Java-Scanner/java-scanner-slides.html#summary",
+    "href": "posts/Java-Scanner/java-scanner-slides.html#summary",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "Summary",
+    "text": "Summary\n\nImport java.util.Scanner.\nCreate new Scanner(System.in).\nUse nextInt(), nextDouble(), or nextLine() based on the variable type.\nWatch out for the newline trap when switching from numbers to text!\n\nHappy Coding! 🚀"
+  },
+  {
+    "objectID": "posts/Java-Scanner/index.html",
+    "href": "posts/Java-Scanner/index.html",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "",
+    "text": "By default, the Java code you write is “deaf.” It executes commands, does calculations, and prints results, but it cannot hear what the user wants to say.\nThe Scanner class is like a hearing aid or a translator. It allows your program to read input from the keyboard (Standard Input) and store it in variables."
+  },
+  {
+    "objectID": "posts/Java-Scanner/index.html#introduction-making-your-code-listen",
+    "href": "posts/Java-Scanner/index.html#introduction-making-your-code-listen",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "",
+    "text": "By default, the Java code you write is “deaf.” It executes commands, does calculations, and prints results, but it cannot hear what the user wants to say.\nThe Scanner class is like a hearing aid or a translator. It allows your program to read input from the keyboard (Standard Input) and store it in variables."
+  },
+  {
+    "objectID": "posts/Java-Scanner/index.html#the-3-golden-steps",
+    "href": "posts/Java-Scanner/index.html#the-3-golden-steps",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "The 3 Golden Steps",
+    "text": "The 3 Golden Steps\nTo use the Scanner, you must always follow these three steps in order. Memorize this pattern!\n\nStep 1: Import the Tool\nJava keeps the Scanner in a utility package to keep things organized. You must import it at the very top of your file.\nimport java.util.Scanner;\n\n\nStep 2: Create the Scanner Object\nInside your main method, you need to create an instance of the Scanner. We usually call it input or scanner.\n// System.in represents the keyboard\nScanner input = new Scanner(System.in);\n\n\nStep 3: Read the Data\nNow, you command the scanner to wait for input and store it in a variable.\nint age = input.nextInt();"
+  },
+  {
+    "objectID": "posts/Java-Scanner/index.html#cheat-sheet-which-command-to-use",
+    "href": "posts/Java-Scanner/index.html#cheat-sheet-which-command-to-use",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "Cheat Sheet: Which Command to Use?",
+    "text": "Cheat Sheet: Which Command to Use?\nDepending on the Data Type you want to read, you must use a specific command (method).\n\n\n\nData Type\nMethod\nExample Use Case\n\n\n\n\nint\ninput.nextInt()\nAge, Year, Quantity\n\n\ndouble\ninput.nextDouble()\nPrice, GPA, Salary\n\n\nString\ninput.next()\nA single word (e.g., First Name)\n\n\nString\ninput.nextLine()\nA full sentence (e.g., Full Name)\n\n\nboolean\ninput.nextBoolean()\nTrue/False inputs"
+  },
+  {
+    "objectID": "posts/Java-Scanner/index.html#full-code-example",
+    "href": "posts/Java-Scanner/index.html#full-code-example",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "💻 Full Code Example",
+    "text": "💻 Full Code Example\nHere is a complete, runnable program. It asks for user details and prints them back.\nimport java.util.Scanner; // Step 1\n\npublic class Main {\n    public static void main(String[] args) {\n        // Step 2: Create the Scanner\n        Scanner input = new Scanner(System.in);\n\n        // Step 3: Ask and Read\n        System.out.print(\"Enter your age: \");\n        int age = input.nextInt();\n\n        System.out.print(\"Enter your GPA: \");\n        double gpa = input.nextDouble();\n\n        System.out.println(\"--- Result ---\");\n        System.out.println(\"Age: \" + age);\n        System.out.println(\"GPA: \" + gpa);\n    }\n}\n\n\n\n\n\n\n\nWarning⚠️ The Common “New Line” Trap\n\n\n\nThere is a famous bug that confuses every beginner.\nIf you use nextInt() (to read a number) and immediately afterwards use nextLine() (to read text), the Scanner will skip the text input!\nWhy? When you type a number and hit Enter, nextInt() takes the number but leaves the “Enter” key press (newline character) in the memory. The next nextLine() reads that leftover “Enter” and thinks you finished typing.\nThe Fix: Add an extra nextLine() just to consume the leftover “Enter”.\nint id = scanner.nextInt(); \n\n// Fix: Consume the leftover newline\nscanner.nextLine(); \n\nString name = scanner.nextLine(); // Now this works!"
+  },
+  {
+    "objectID": "posts/Java-Scanner/index.html#summary",
+    "href": "posts/Java-Scanner/index.html#summary",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "Summary",
+    "text": "Summary\n\nImport java.util.Scanner.\nCreate new Scanner(System.in).\nUse nextInt(), nextDouble(), or nextLine() based on the variable type.\nWatch out for the newline trap when switching from numbers to text!\n\nHappy Coding! 🚀"
   }
 ]

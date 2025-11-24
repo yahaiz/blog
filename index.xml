@@ -10,6 +10,406 @@
 <atom:link href="https://yahaiz.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Mon, 24 Nov 2025 07:23:42 GMT</lastBuildDate>
+<lastBuildDate>Sun, 23 Nov 2025 20:30:00 GMT</lastBuildDate>
+<item>
+  <title>Java Scanner: The Ultimate Beginner’s Guide</title>
+  <dc:creator>Yahya Izadi</dc:creator>
+  <dc:creator>Pooyan Motamediquarto</dc:creator>
+  <link>https://yahaiz.github.io/blog/posts/Java-Scanner/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="introduction-making-your-code-listen" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-making-your-code-listen">Introduction: Making Your Code “Listen”</h2>
+<p>By default, the Java code you write is <strong>“deaf.”</strong> It executes commands, does calculations, and prints results, but it cannot hear what the user wants to say.</p>
+<p>The <strong><code>Scanner</code></strong> class is like a hearing aid or a translator. It allows your program to read input from the keyboard (Standard Input) and store it in variables.</p>
+<hr>
+</section>
+<section id="the-3-golden-steps" class="level2">
+<h2 class="anchored" data-anchor-id="the-3-golden-steps">The 3 Golden Steps</h2>
+<p>To use the Scanner, you must always follow these three steps in order. Memorize this pattern!</p>
+<section id="step-1-import-the-tool" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-import-the-tool">Step 1: Import the Tool</h3>
+<p>Java keeps the Scanner in a utility package to keep things organized. You must import it at the very top of your file.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">import</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">java</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">util</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">Scanner</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div></div>
+</section>
+<section id="step-2-create-the-scanner-object" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-the-scanner-object">Step 2: Create the Scanner Object</h3>
+<p>Inside your <code>main</code> method, you need to create an instance of the Scanner. We usually call it <code>input</code> or <code>scanner</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// System.in represents the keyboard</span></span>
+<span id="cb2-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">Scanner</span> input <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">new</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">Scanner</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">System</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">in</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span></code></pre></div></div>
+</section>
+<section id="step-3-read-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-read-the-data">Step 3: Read the Data</h3>
+<p>Now, you command the scanner to wait for input and store it in a variable.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">int</span> age <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> input<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nextInt</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">();</span></span></code></pre></div></div>
+<hr>
+</section>
+</section>
+<section id="cheat-sheet-which-command-to-use" class="level2">
+<h2 class="anchored" data-anchor-id="cheat-sheet-which-command-to-use">Cheat Sheet: Which Command to Use?</h2>
+<p>Depending on the <strong>Data Type</strong> you want to read, you must use a specific command (method).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Example Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;"><code>input.nextInt()</code></td>
+<td style="text-align: left;">Age, Year, Quantity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>double</code></td>
+<td style="text-align: left;"><code>input.nextDouble()</code></td>
+<td style="text-align: left;">Price, GPA, Salary</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>String</code></td>
+<td style="text-align: left;"><code>input.next()</code></td>
+<td style="text-align: left;">A single word (e.g., First Name)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>String</code></td>
+<td style="text-align: left;"><code>input.nextLine()</code></td>
+<td style="text-align: left;">A full sentence (e.g., Full Name)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>boolean</code></td>
+<td style="text-align: left;"><code>input.nextBoolean()</code></td>
+<td style="text-align: left;">True/False inputs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="full-code-example" class="level2">
+<h2 class="anchored" data-anchor-id="full-code-example">💻 Full Code Example</h2>
+<p>Here is a complete, runnable program. It asks for user details and prints them back.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">import</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">java</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">util</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">Scanner</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Step 1</span></span>
+<span id="cb4-2"></span>
+<span id="cb4-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">public</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">class</span> Main <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-4">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">public</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">static</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">void</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">main</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">String</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[]</span> args<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb4-5">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Step 2: Create the Scanner</span></span>
+<span id="cb4-6">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">Scanner</span> input <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">new</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">Scanner</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">System</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">in</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb4-7"></span>
+<span id="cb4-8">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Step 3: Ask and Read</span></span>
+<span id="cb4-9">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">System</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">out</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Enter your age: "</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb4-10">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">int</span> age <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> input<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nextInt</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">();</span></span>
+<span id="cb4-11"></span>
+<span id="cb4-12">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">System</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">out</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Enter your GPA: "</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb4-13">        <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">double</span> gpa <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> input<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nextDouble</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">();</span></span>
+<span id="cb4-14"></span>
+<span id="cb4-15">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">System</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">out</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">println</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"--- Result ---"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb4-16">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">System</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">out</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">println</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Age: "</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> age<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb4-17">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">System</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">out</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">println</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"GPA: "</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> gpa<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb4-18">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb4-19"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div></div>
+<hr>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>⚠️ The Common “New Line” Trap
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is a famous bug that confuses every beginner.</p>
+<p>If you use <code>nextInt()</code> (to read a number) and <strong>immediately</strong> afterwards use <code>nextLine()</code> (to read text), the Scanner will <strong>skip</strong> the text input!</p>
+<p><strong>Why?</strong> When you type a number and hit <strong>Enter</strong>, <code>nextInt()</code> takes the number but leaves the “Enter” key press (newline character) in the memory. The next <code>nextLine()</code> reads that leftover “Enter” and thinks you finished typing.</p>
+<p><strong>The Fix:</strong> Add an extra <code>nextLine()</code> just to consume the leftover “Enter”.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">int</span> id <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> scanner<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nextInt</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">();</span> </span>
+<span id="cb5-2"></span>
+<span id="cb5-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Fix: Consume the leftover newline</span></span>
+<span id="cb5-4">scanner<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nextLine</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">();</span> </span>
+<span id="cb5-5"></span>
+<span id="cb5-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">String</span> name <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> scanner<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nextLine</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">();</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// Now this works!</span></span></code></pre></div></div>
+</div>
+</div>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<ol type="1">
+<li><strong>Import</strong> <code>java.util.Scanner</code>.</li>
+<li><strong>Create</strong> <code>new Scanner(System.in)</code>.</li>
+<li><strong>Use</strong> <code>nextInt()</code>, <code>nextDouble()</code>, or <code>nextLine()</code> based on the variable type.</li>
+<li><strong>Watch out</strong> for the newline trap when switching from numbers to text!</li>
+</ol>
+<p>Happy Coding! 🚀</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Java</category>
+  <category>Programming</category>
+  <category>Beginners</category>
+  <category>Tutorial</category>
+  <guid>https://yahaiz.github.io/blog/posts/Java-Scanner/</guid>
+  <pubDate>Sun, 23 Nov 2025 20:30:00 GMT</pubDate>
+  <media:content url="https://yahaiz.github.io/blog/posts/Java-Scanner/java-scanner.png" medium="image" type="image/png" height="108" width="144"/>
+</item>
 </channel>
 </rss>

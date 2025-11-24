@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -359,7 +359,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QmVnaW5uZXJz">Beginners <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SmF2YQ==">Java <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHJvZ3JhbW1pbmc=">Programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHV0b3JpYWw=">Tutorial <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -374,7 +374,45 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="SmF2YSUyQ1Byb2dyYW1taW5nJTJDQmVnaW5uZXJzJTJDVHV0b3JpYWw=" data-listing-date-sort="1763929800000" data-listing-file-modified-sort="1763969094642" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="521">
+<div class="thumbnail"><a href="./posts/Java-Scanner/index.html" class="no-external">
 
+<img loading="lazy" src="./posts/Java-Scanner/java-scanner.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Java-Scanner/index.html" class="no-external">Java Scanner: The Ultimate Beginner’s Guide</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Java-Scanner/index.html" class="no-external">How to make your Java programs listen to the user</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('SmF2YQ=='); return false;">Java</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHJvZ3JhbW1pbmc='); return false;">Programming</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmVnaW5uZXJz'); return false;">Beginners</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VHV0b3JpYWw='); return false;">Tutorial</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/Java-Scanner/index.html" class="no-external">
+By default, the Java code you write is <strong>“deaf.”</strong> It executes commands, does calculations, and prints results, but it cannot hear what the user wants to say.
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/Java-Scanner/index.html" class="no-external">
+<div class="listing-date">
+Nov 24, 2025
+</div>
+<div class="listing-author">
+Yahya Izadi, Pooyan Motamediquarto
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
