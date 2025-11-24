@@ -216,47 +216,60 @@ Pooyan Motamedi
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
-<li><a href="#/introduction-making-your-code-listen" id="/toc-introduction-making-your-code-listen">Introduction: Making Your Code “Listen”</a></li>
-<li><a href="#/the-3-golden-steps" id="/toc-the-3-golden-steps">The 3 Golden Steps</a>
+<li><a href="#/introduction-the-scanner-machine" id="/toc-introduction-the-scanner-machine">Introduction: The Scanner Machine</a></li>
+<li><a href="#/the-3-steps" id="/toc-the-3-steps">The 3 Steps</a>
 <ul>
-<li><a href="#/step-1-import-the-tool" id="/toc-step-1-import-the-tool">Step 1: Import the Tool</a></li>
-<li><a href="#/step-2-create-the-scanner-object" id="/toc-step-2-create-the-scanner-object">Step 2: Create the Scanner Object</a></li>
-<li><a href="#/step-3-read-the-data" id="/toc-step-3-read-the-data">Step 3: Read the Data</a></li>
+<li><a href="#/step-1-the-import-line" id="/toc-step-1-the-import-line">Step 1: The Import Line</a></li>
+<li><a href="#/step-2-turn-on-the-scanner" id="/toc-step-2-turn-on-the-scanner">Step 2: Turn on the Scanner</a></li>
+<li><a href="#/step-3-scan-the-data" id="/toc-step-3-scan-the-data">Step 3: Scan the Data</a></li>
 </ul></li>
 <li><a href="#/cheat-sheet-which-command-to-use" id="/toc-cheat-sheet-which-command-to-use">Cheat Sheet: Which Command to Use?</a></li>
 <li><a href="#/full-code-example" id="/toc-full-code-example">💻 Full Code Example</a></li>
-
 <li><a href="#/summary" id="/toc-summary">Summary</a></li>
 </ul>
 </nav>
 </section>
-<section id="introduction-making-your-code-listen" class="slide level2">
-<h2>Introduction: Making Your Code “Listen”</h2>
-<p>By default, the Java code you write is <strong>“deaf.”</strong> It executes commands, does calculations, and prints results, but it cannot hear what the user wants to say.</p>
-<p>The <strong><code>Scanner</code></strong> class is like a hearing aid or a translator. It allows your program to read input from the keyboard (Standard Input) and store it in variables.</p>
+<section id="introduction-the-scanner-machine" class="slide level2">
+<h2>Introduction: The Scanner Machine</h2>
+<p>By default, the variables you write in code are fixed. But what if we want to ask the user for the numbers?</p>
+<p>Think of the <strong>Scanner</strong> like a physical scanner machine in an office. Usually, when you put a paper in a physical scanner, it scans the <strong>entire</strong> page at once.</p>
+<p>In Java, our Scanner is a bit different. It looks at what the user types on the keyboard, but we can be very specific about <strong>what</strong> to scan. We can tell it: <em>“Only scan the next number (int)”</em> or <em>“Only scan the next decimal point (float).”</em></p>
 </section>
-<section id="the-3-golden-steps" class="slide level2">
-<h2>The 3 Golden Steps</h2>
-<p>To use the Scanner, you must always follow these three steps in order. Memorize this pattern!</p>
-<h3 id="step-1-import-the-tool">Step 1: Import the Tool</h3>
-<p>Java keeps the Scanner in a utility package to keep things organized. You must import it at the very top of your file.</p>
+<section id="the-3-steps" class="slide level2">
+<h2>The 3 Steps</h2>
+<p>To use the Scanner, follow these three steps.</p>
+<h3 id="step-1-the-import-line">Step 1: The Import Line</h3>
+<p>Java hides the Scanner tool in a specific library. You need to tell Java where to find it. Put this line at the <strong>very top</strong> of your file.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<h3 id="step-2-create-the-scanner-object">Step 2: Create the Scanner Object</h3>
-<p>Inside your <code>main</code> method, you need to create an instance of the Scanner. We usually call it <code>input</code> or <code>scanner</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a></a><span class="co">// System.in represents the keyboard</span></span>
+<h3 id="step-2-turn-on-the-scanner">Step 2: Turn on the Scanner</h3>
+<p>Inside your code (in the <code>main</code> section), you need to write a specific line to set up the scanner.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>This line looks a bit complicated with keywords like <code>new</code> and <code>System.in</code>. <strong>For now, please just accept this line as a rule.</strong> Copy and paste it exactly as it is.</p>
+</div>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a></a><span class="co">// This line prepares the scanner to read from the keyboard</span></span>
 <span id="cb2-2"><a></a><span class="bu">Scanner</span> input <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<h3 id="step-3-read-the-data">Step 3: Read the Data</h3>
-<p>Now, you command the scanner to wait for input and store it in a variable.</p>
+<h3 id="step-3-scan-the-data">Step 3: Scan the Data</h3>
+<p>Now, you command the scanner to wait for the user to type something and store it in a variable.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a></a><span class="dt">int</span> age <span class="op">=</span> input<span class="op">.</span><span class="fu">nextInt</span><span class="op">();</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="cheat-sheet-which-command-to-use" class="slide level2">
 <h2>Cheat Sheet: Which Command to Use?</h2>
-<p>Depending on the <strong>Data Type</strong> you want to read, you must use a specific command (method).</p>
+<p>Depending on the <strong>Data Type</strong> (variable) you want to fill, you must use a specific command.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Command</th>
 <th style="text-align: left;">Example Use Case</th>
 </tr>
 </thead>
@@ -264,86 +277,56 @@ Pooyan Motamedi
 <tr class="odd">
 <td style="text-align: left;"><code>int</code></td>
 <td style="text-align: left;"><code>input.nextInt()</code></td>
-<td style="text-align: left;">Age, Year, Quantity</td>
+<td style="text-align: left;">Whole numbers (Age, Year)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>double</code></td>
 <td style="text-align: left;"><code>input.nextDouble()</code></td>
-<td style="text-align: left;">Price, GPA, Salary</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>String</code></td>
-<td style="text-align: left;"><code>input.next()</code></td>
-<td style="text-align: left;">A single word (e.g., First Name)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>String</code></td>
-<td style="text-align: left;"><code>input.nextLine()</code></td>
-<td style="text-align: left;">A full sentence (e.g., Full Name)</td>
+<td style="text-align: left;">Decimal numbers (Price, GPA)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>boolean</code></td>
 <td style="text-align: left;"><code>input.nextBoolean()</code></td>
-<td style="text-align: left;">True/False inputs</td>
+<td style="text-align: left;">True/False answers</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="full-code-example" class="slide level2">
 <h2>💻 Full Code Example</h2>
-<p>Here is a complete, runnable program. It asks for user details and prints them back.</p>
+<p>Here is a complete program. It asks for a student’s number and age.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span> <span class="co">// Step 1</span></span>
 <span id="cb4-2"><a></a></span>
 <span id="cb4-3"><a></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
 <span id="cb4-4"><a></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-5"><a></a>        <span class="co">// Step 2: Create the Scanner</span></span>
-<span id="cb4-6"><a></a>        <span class="bu">Scanner</span> input <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
-<span id="cb4-7"><a></a></span>
-<span id="cb4-8"><a></a>        <span class="co">// Step 3: Ask and Read</span></span>
-<span id="cb4-9"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"Enter your age: "</span><span class="op">);</span></span>
-<span id="cb4-10"><a></a>        <span class="dt">int</span> age <span class="op">=</span> input<span class="op">.</span><span class="fu">nextInt</span><span class="op">();</span></span>
-<span id="cb4-11"><a></a></span>
-<span id="cb4-12"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"Enter your GPA: "</span><span class="op">);</span></span>
-<span id="cb4-13"><a></a>        <span class="dt">double</span> gpa <span class="op">=</span> input<span class="op">.</span><span class="fu">nextDouble</span><span class="op">();</span></span>
-<span id="cb4-14"><a></a></span>
-<span id="cb4-15"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"--- Result ---"</span><span class="op">);</span></span>
-<span id="cb4-16"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Age: "</span> <span class="op">+</span> age<span class="op">);</span></span>
-<span id="cb4-17"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"GPA: "</span> <span class="op">+</span> gpa<span class="op">);</span></span>
-<span id="cb4-18"><a></a>    <span class="op">}</span></span>
-<span id="cb4-19"><a></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section class="slide level2">
-
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>⚠️ The Common “New Line” Trap</strong></p>
-</div>
-<div class="callout-content">
-<p>There is a famous bug that confuses every beginner.</p>
-<p>If you use <code>nextInt()</code> (to read a number) and <strong>immediately</strong> afterwards use <code>nextLine()</code> (to read text), the Scanner will <strong>skip</strong> the text input!</p>
-<p><strong>Why?</strong> When you type a number and hit <strong>Enter</strong>, <code>nextInt()</code> takes the number but leaves the “Enter” key press (newline character) in the memory. The next <code>nextLine()</code> reads that leftover “Enter” and thinks you finished typing.</p>
-<p><strong>The Fix:</strong> Add an extra <code>nextLine()</code> just to consume the leftover “Enter”.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a></a><span class="dt">int</span> id <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextInt</span><span class="op">();</span> </span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a><span class="co">// Fix: Consume the leftover newline</span></span>
-<span id="cb5-4"><a></a>scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span> </span>
-<span id="cb5-5"><a></a></span>
-<span id="cb5-6"><a></a><span class="bu">String</span> name <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span> <span class="co">// Now this works!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
+<span id="cb4-5"><a></a>    </span>
+<span id="cb4-6"><a></a>        <span class="co">// Step 2: Setup the Scanner </span></span>
+<span id="cb4-7"><a></a>        <span class="co">// (Remember: Just copy this line for now!)</span></span>
+<span id="cb4-8"><a></a>        <span class="bu">Scanner</span> input <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
+<span id="cb4-9"><a></a></span>
+<span id="cb4-10"><a></a>        <span class="co">// Step 3: Ask and Scan</span></span>
+<span id="cb4-11"><a></a>        </span>
+<span id="cb4-12"><a></a>        <span class="co">// 1. Ask for an Integer</span></span>
+<span id="cb4-13"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"Enter your Student Number: "</span><span class="op">);</span></span>
+<span id="cb4-14"><a></a>        <span class="dt">int</span> studentNumber <span class="op">=</span> input<span class="op">.</span><span class="fu">nextInt</span><span class="op">();</span></span>
+<span id="cb4-15"><a></a></span>
+<span id="cb4-16"><a></a>        <span class="co">// 2. Ask for an Integer</span></span>
+<span id="cb4-17"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"Enter your age: "</span><span class="op">);</span></span>
+<span id="cb4-18"><a></a>        <span class="dt">int</span> age <span class="op">=</span> input<span class="op">.</span><span class="fu">nextInt</span><span class="op">();</span></span>
+<span id="cb4-19"><a></a></span>
+<span id="cb4-20"><a></a>        <span class="co">// Print the results back to see if it worked</span></span>
+<span id="cb4-21"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"--- Result ---"</span><span class="op">);</span></span>
+<span id="cb4-22"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Student Number: "</span> <span class="op">+</span> studentNumber<span class="op">);</span></span>
+<span id="cb4-23"><a></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Age: "</span> <span class="op">+</span> age<span class="op">);</span></span>
+<span id="cb4-24"><a></a>    <span class="op">}</span></span>
+<span id="cb4-25"><a></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="summary" class="slide level2">
 <h2>Summary</h2>
 <ol type="1">
-<li><strong>Import</strong> <code>java.util.Scanner</code>.</li>
-<li><strong>Create</strong> <code>new Scanner(System.in)</code>.</li>
-<li><strong>Use</strong> <code>nextInt()</code>, <code>nextDouble()</code>, or <code>nextLine()</code> based on the variable type.</li>
-<li><strong>Watch out</strong> for the newline trap when switching from numbers to text!</li>
+<li><strong>Import</strong> the tool at the top: <code>import java.util.Scanner;</code></li>
+<li><strong>Setup</strong> the tool inside main: <code>Scanner input = new Scanner(System.in);</code></li>
+<li><strong>Scan</strong> the specific type you need: <code>nextInt()</code> or <code>nextDouble()</code>.</li>
 </ol>
 <p>Happy Coding! 🚀</p>
 
