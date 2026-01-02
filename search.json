@@ -1,17 +1,73 @@
 [
   {
+    "objectID": "posts/java-scanner/index.html",
+    "href": "posts/java-scanner/index.html",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "",
+    "text": "By default, the variables you write in code are fixed. But what if we want to ask the user for the numbers?\nThink of the Scanner like a physical scanner machine in an office. Usually, when you put a paper in a physical scanner, it scans the entire page at once.\nIn Java, our Scanner is a bit different. It looks at what the user types on the keyboard, but we can be very specific about what to scan. We can tell it: “Only scan the next number (int)” or “Only scan the next decimal point (float).”"
+  },
+  {
+    "objectID": "posts/java-scanner/index.html#introduction-the-scanner-machine",
+    "href": "posts/java-scanner/index.html#introduction-the-scanner-machine",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "",
+    "text": "By default, the variables you write in code are fixed. But what if we want to ask the user for the numbers?\nThink of the Scanner like a physical scanner machine in an office. Usually, when you put a paper in a physical scanner, it scans the entire page at once.\nIn Java, our Scanner is a bit different. It looks at what the user types on the keyboard, but we can be very specific about what to scan. We can tell it: “Only scan the next number (int)” or “Only scan the next decimal point (float).”"
+  },
+  {
+    "objectID": "posts/java-scanner/index.html#the-3-steps",
+    "href": "posts/java-scanner/index.html#the-3-steps",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "The 3 Steps",
+    "text": "The 3 Steps\nTo use the Scanner, follow these three steps.\n\nStep 1: The Import Line\nJava hides the Scanner tool in a specific library. You need to tell Java where to find it. Put this line at the very top of your file.\nimport java.util.Scanner;\n\n\nStep 2: Turn on the Scanner\nInside your code (in the main section), you need to write a specific line to set up the scanner.\n\n\n\n\n\n\nNoteNote\n\n\n\nThis line looks a bit complicated with keywords like new and System.in. For now, please just accept this line as a rule. Copy and paste it exactly as it is.\n\n\n// This line prepares the scanner to read from the keyboard\nScanner input = new Scanner(System.in);\n\n\nStep 3: Scan the Data\nNow, you command the scanner to wait for the user to type something and store it in a variable.\nint age = input.nextInt();"
+  },
+  {
+    "objectID": "posts/java-scanner/index.html#cheat-sheet-which-command-to-use",
+    "href": "posts/java-scanner/index.html#cheat-sheet-which-command-to-use",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "Cheat Sheet: Which Command to Use?",
+    "text": "Cheat Sheet: Which Command to Use?\nDepending on the Data Type (variable) you want to fill, you must use a specific command.\n\n\n\nData Type\nCommand\nExample Use Case\n\n\n\n\nint\ninput.nextInt()\nWhole numbers (Age, Year)\n\n\nlong\ninput.nextLong()\nLarge whole numbers (Population)\n\n\nfloat\ninput.nextFloat()\nDecimal numbers (Temperature)\n\n\ndouble\ninput.nextDouble()\nDecimal numbers (Price, GPA)\n\n\nboolean\ninput.nextBoolean()\nTrue/False answers"
+  },
+  {
+    "objectID": "posts/java-scanner/index.html#full-code-example",
+    "href": "posts/java-scanner/index.html#full-code-example",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "💻 Full Code Example",
+    "text": "💻 Full Code Example\nHere is a complete program. It asks for a student’s number and age.\nimport java.util.Scanner; // Step 1\n\npublic class Main {\n    public static void main(String[] args) {\n    \n        // Step 2: Setup the Scanner \n        // (Remember: Just copy this line for now!)\n        Scanner input = new Scanner(System.in);\n\n        // Step 3: Ask and Scan\n        \n        // 1. Ask for an Integer\n        System.out.print(\"Enter your Student Number: \");\n        int studentNumber = input.nextInt();\n\n        // 2. Ask for an Integer\n        System.out.print(\"Enter your age: \");\n        int age = input.nextInt();\n\n        // Print the results back to see if it worked\n        System.out.println(\"--- Result ---\");\n        System.out.println(\"Student Number: \" + studentNumber);\n        System.out.println(\"Age: \" + age);\n    }\n}"
+  },
+  {
+    "objectID": "posts/java-scanner/index.html#summary",
+    "href": "posts/java-scanner/index.html#summary",
+    "title": "Java Scanner: The Ultimate Beginner’s Guide",
+    "section": "Summary",
+    "text": "Summary\n\nImport the tool at the top: import java.util.Scanner;\nSetup the tool inside main: Scanner input = new Scanner(System.in);\nScan the specific type you need: nextInt() or nextDouble().\n\nHappy Coding! 🚀"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yahya Izadi",
+    "section": "",
+    "text": "Application of Approximation Theory in Data Science\n\n\n\n\n\n\nData Science\n\nMachine Learning\n\nNumerical Analysis\n\nMathematics\n\n\n\nExploring how approximation theory serves as the mathematical backbone of modern machine learning and data fitting techniques.\n\n\n\n\n\nDec 30, 2025\n\n\nYahya Izadi\n\n\n\n\n\n\n\n\n\n\n\n\nJava Scanner: The Ultimate Beginner’s Guide\n\n\nHow to make your Java programs listen to the user\n\n\n\nJava\n\nProgramming\n\nBeginners\n\nTutorial\n\n\n\n\n\n\n\n\n\nNov 24, 2025\n\n\nYahya Izadi, Pooyan Motamedi\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
     "objectID": "posts/approximation-theory-data-science/index.html",
     "href": "posts/approximation-theory-data-science/index.html",
     "title": "Application of Approximation Theory in Data Science",
     "section": "",
-    "text": "Instructor: Dr. Najmeh Hosseini Monjezi\nUniversity: University of Isfahan"
+    "text": "In quantitative analysis, we face a constant challenge: Reality is complex, but we need simple functions to model it. This is exactly what Approximation Theory is about.\nWhile it has roots in Numerical Analysis, for us in Data Science, it boils down to two main tasks:\n\nSimplification: Turning heavy functions (like complex exponentials) into easy-to-handle polynomials.\nData Fitting: Finding a curve that best represents a set of scattered data points.\n\nIn modern Data Science, “Data Fitting” isn’t just theory—it is the backbone of Supervised Learning."
   },
   {
     "objectID": "posts/approximation-theory-data-science/index.html#introduction-connecting-math-to-reality",
     "href": "posts/approximation-theory-data-science/index.html#introduction-connecting-math-to-reality",
     "title": "Application of Approximation Theory in Data Science",
-    "section": "Introduction: Connecting Math to Reality",
-    "text": "Introduction: Connecting Math to Reality\nIn quantitative analysis, we face a constant challenge: Reality is complex, but we need simple functions to model it. This is exactly what Approximation Theory is about.\nWhile it has roots in Numerical Analysis, for us in Data Science, it boils down to two main tasks:\n\nSimplification: Turning heavy functions (like complex exponentials) into easy-to-handle polynomials.\nData Fitting: Finding a curve that best represents a set of scattered data points.\n\nIn modern Data Science, “Data Fitting” isn’t just theory—it is the backbone of Supervised Learning."
+    "section": "",
+    "text": "In quantitative analysis, we face a constant challenge: Reality is complex, but we need simple functions to model it. This is exactly what Approximation Theory is about.\nWhile it has roots in Numerical Analysis, for us in Data Science, it boils down to two main tasks:\n\nSimplification: Turning heavy functions (like complex exponentials) into easy-to-handle polynomials.\nData Fitting: Finding a curve that best represents a set of scattered data points.\n\nIn modern Data Science, “Data Fitting” isn’t just theory—it is the backbone of Supervised Learning."
   },
   {
     "objectID": "posts/approximation-theory-data-science/index.html#the-discrete-problem-linear-algebra-and-regression",
@@ -46,97 +102,6 @@
     "href": "posts/approximation-theory-data-science/index.html#final-simulation-reconstructing-a-complex-signal",
     "title": "Application of Approximation Theory in Data Science",
     "section": "Final Simulation: Reconstructing a Complex Signal",
-    "text": "Final Simulation: Reconstructing a Complex Signal\nTo show the power of Continuous Least Squares, let’s reconstruct a complex signal (mixed sine, cosine, and exponentials) using Legendre polynomials. Because of orthogonality, we can compute the “contribution” of each degree independently.\n\n\n\n\n\n\n\n\nFigure 7\n\n\n\n\n\nThis process highlights the elegance of the math: by projecting complex realities onto simpler orthogonal structures, we get both speed and clarity."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Yahya Izadi",
-    "section": "",
-    "text": "Application of Approximation Theory in Data Science\n\n\n\n\n\n\nData Science\n\nMachine Learning\n\nNumerical Analysis\n\nMathematics\n\n\n\nExploring how approximation theory serves as the mathematical backbone of modern machine learning and data fitting techniques.\n\n\n\n\n\nDec 30, 2025\n\n\nYahya Izadi\n\n\n\n\n\n\n\n\n\n\n\n\nJava Scanner: The Ultimate Beginner’s Guide\n\n\nHow to make your Java programs listen to the user\n\n\n\nJava\n\nProgramming\n\nBeginners\n\nTutorial\n\n\n\n\n\n\n\n\n\nNov 24, 2025\n\n\nYahya Izadi, Pooyan Motamedi\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/Java-Scanner/java-scanner-slides.html#introduction-the-scanner-machine",
-    "href": "posts/Java-Scanner/java-scanner-slides.html#introduction-the-scanner-machine",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "Introduction: The Scanner Machine",
-    "text": "Introduction: The Scanner Machine\nBy default, the variables you write in code are fixed. But what if we want to ask the user for the numbers?\nThink of the Scanner like a physical scanner machine in an office. Usually, when you put a paper in a physical scanner, it scans the entire page at once.\nIn Java, our Scanner is a bit different. It looks at what the user types on the keyboard, but we can be very specific about what to scan. We can tell it: “Only scan the next number (int)” or “Only scan the next decimal point (float).”"
-  },
-  {
-    "objectID": "posts/Java-Scanner/java-scanner-slides.html#the-3-steps",
-    "href": "posts/Java-Scanner/java-scanner-slides.html#the-3-steps",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "The 3 Steps",
-    "text": "The 3 Steps\nTo use the Scanner, follow these three steps.\nStep 1: The Import Line\nJava hides the Scanner tool in a specific library. You need to tell Java where to find it. Put this line at the very top of your file.\nimport java.util.Scanner;\nStep 2: Turn on the Scanner\nInside your code (in the main section), you need to write a specific line to set up the scanner.\n\n\n\n\n\n\nNote\n\n\nThis line looks a bit complicated with keywords like new and System.in. For now, please just accept this line as a rule. Copy and paste it exactly as it is.\n\n\n\n// This line prepares the scanner to read from the keyboard\nScanner input = new Scanner(System.in);\nStep 3: Scan the Data\nNow, you command the scanner to wait for the user to type something and store it in a variable.\nint age = input.nextInt();"
-  },
-  {
-    "objectID": "posts/Java-Scanner/java-scanner-slides.html#cheat-sheet-which-command-to-use",
-    "href": "posts/Java-Scanner/java-scanner-slides.html#cheat-sheet-which-command-to-use",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "Cheat Sheet: Which Command to Use?",
-    "text": "Cheat Sheet: Which Command to Use?\nDepending on the Data Type (variable) you want to fill, you must use a specific command.\n\n\n\nData Type\nCommand\nExample Use Case\n\n\n\n\nint\ninput.nextInt()\nWhole numbers (Age, Year)\n\n\nlong\ninput.nextLong()\nLarge whole numbers (Population)\n\n\nfloat\ninput.nextFloat()\nDecimal numbers (Temperature)\n\n\ndouble\ninput.nextDouble()\nDecimal numbers (Price, GPA)\n\n\nboolean\ninput.nextBoolean()\nTrue/False answers"
-  },
-  {
-    "objectID": "posts/Java-Scanner/java-scanner-slides.html#full-code-example",
-    "href": "posts/Java-Scanner/java-scanner-slides.html#full-code-example",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "💻 Full Code Example",
-    "text": "💻 Full Code Example\nHere is a complete program. It asks for a student’s number and age.\nimport java.util.Scanner; // Step 1\n\npublic class Main {\n    public static void main(String[] args) {\n    \n        // Step 2: Setup the Scanner \n        // (Remember: Just copy this line for now!)\n        Scanner input = new Scanner(System.in);\n\n        // Step 3: Ask and Scan\n        \n        // 1. Ask for an Integer\n        System.out.print(\"Enter your Student Number: \");\n        int studentNumber = input.nextInt();\n\n        // 2. Ask for an Integer\n        System.out.print(\"Enter your age: \");\n        int age = input.nextInt();\n\n        // Print the results back to see if it worked\n        System.out.println(\"--- Result ---\");\n        System.out.println(\"Student Number: \" + studentNumber);\n        System.out.println(\"Age: \" + age);\n    }\n}"
-  },
-  {
-    "objectID": "posts/Java-Scanner/java-scanner-slides.html#summary",
-    "href": "posts/Java-Scanner/java-scanner-slides.html#summary",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "Summary",
-    "text": "Summary\n\nImport the tool at the top: import java.util.Scanner;\nSetup the tool inside main: Scanner input = new Scanner(System.in);\nScan the specific type you need: nextInt() or nextDouble().\n\nHappy Coding! 🚀"
-  },
-  {
-    "objectID": "posts/Java-Scanner/index.html",
-    "href": "posts/Java-Scanner/index.html",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "",
-    "text": "By default, the variables you write in code are fixed. But what if we want to ask the user for the numbers?\nThink of the Scanner like a physical scanner machine in an office. Usually, when you put a paper in a physical scanner, it scans the entire page at once.\nIn Java, our Scanner is a bit different. It looks at what the user types on the keyboard, but we can be very specific about what to scan. We can tell it: “Only scan the next number (int)” or “Only scan the next decimal point (float).”"
-  },
-  {
-    "objectID": "posts/Java-Scanner/index.html#introduction-the-scanner-machine",
-    "href": "posts/Java-Scanner/index.html#introduction-the-scanner-machine",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "",
-    "text": "By default, the variables you write in code are fixed. But what if we want to ask the user for the numbers?\nThink of the Scanner like a physical scanner machine in an office. Usually, when you put a paper in a physical scanner, it scans the entire page at once.\nIn Java, our Scanner is a bit different. It looks at what the user types on the keyboard, but we can be very specific about what to scan. We can tell it: “Only scan the next number (int)” or “Only scan the next decimal point (float).”"
-  },
-  {
-    "objectID": "posts/Java-Scanner/index.html#the-3-steps",
-    "href": "posts/Java-Scanner/index.html#the-3-steps",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "The 3 Steps",
-    "text": "The 3 Steps\nTo use the Scanner, follow these three steps.\n\nStep 1: The Import Line\nJava hides the Scanner tool in a specific library. You need to tell Java where to find it. Put this line at the very top of your file.\nimport java.util.Scanner;\n\n\nStep 2: Turn on the Scanner\nInside your code (in the main section), you need to write a specific line to set up the scanner.\n\n\n\n\n\n\nNoteNote\n\n\n\nThis line looks a bit complicated with keywords like new and System.in. For now, please just accept this line as a rule. Copy and paste it exactly as it is.\n\n\n// This line prepares the scanner to read from the keyboard\nScanner input = new Scanner(System.in);\n\n\nStep 3: Scan the Data\nNow, you command the scanner to wait for the user to type something and store it in a variable.\nint age = input.nextInt();"
-  },
-  {
-    "objectID": "posts/Java-Scanner/index.html#cheat-sheet-which-command-to-use",
-    "href": "posts/Java-Scanner/index.html#cheat-sheet-which-command-to-use",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "Cheat Sheet: Which Command to Use?",
-    "text": "Cheat Sheet: Which Command to Use?\nDepending on the Data Type (variable) you want to fill, you must use a specific command.\n\n\n\nData Type\nCommand\nExample Use Case\n\n\n\n\nint\ninput.nextInt()\nWhole numbers (Age, Year)\n\n\nlong\ninput.nextLong()\nLarge whole numbers (Population)\n\n\nfloat\ninput.nextFloat()\nDecimal numbers (Temperature)\n\n\ndouble\ninput.nextDouble()\nDecimal numbers (Price, GPA)\n\n\nboolean\ninput.nextBoolean()\nTrue/False answers"
-  },
-  {
-    "objectID": "posts/Java-Scanner/index.html#full-code-example",
-    "href": "posts/Java-Scanner/index.html#full-code-example",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "💻 Full Code Example",
-    "text": "💻 Full Code Example\nHere is a complete program. It asks for a student’s number and age.\nimport java.util.Scanner; // Step 1\n\npublic class Main {\n    public static void main(String[] args) {\n    \n        // Step 2: Setup the Scanner \n        // (Remember: Just copy this line for now!)\n        Scanner input = new Scanner(System.in);\n\n        // Step 3: Ask and Scan\n        \n        // 1. Ask for an Integer\n        System.out.print(\"Enter your Student Number: \");\n        int studentNumber = input.nextInt();\n\n        // 2. Ask for an Integer\n        System.out.print(\"Enter your age: \");\n        int age = input.nextInt();\n\n        // Print the results back to see if it worked\n        System.out.println(\"--- Result ---\");\n        System.out.println(\"Student Number: \" + studentNumber);\n        System.out.println(\"Age: \" + age);\n    }\n}"
-  },
-  {
-    "objectID": "posts/Java-Scanner/index.html#summary",
-    "href": "posts/Java-Scanner/index.html#summary",
-    "title": "Java Scanner: The Ultimate Beginner’s Guide",
-    "section": "Summary",
-    "text": "Summary\n\nImport the tool at the top: import java.util.Scanner;\nSetup the tool inside main: Scanner input = new Scanner(System.in);\nScan the specific type you need: nextInt() or nextDouble().\n\nHappy Coding! 🚀"
+    "text": "Final Simulation: Reconstructing a Complex Signal\nTo show the power of Continuous Least Squares, let’s reconstruct a complex signal (mixed sine, cosine, and exponentials) using Legendre polynomials. Because of orthogonality, we can compute the “contribution” of each degree independently.\n\n\n\n\n\n\n\n\nFigure 7\n\n\n\n\n\nThis process highlights the elegance of the math: by projecting complex realities onto simpler orthogonal structures, we get both speed and clarity.\n\nCourse Info:\n\nInstructor: Dr. Najmeh Hosseini Monjezi\nUniversity: University of Isfahan"
   }
 ]

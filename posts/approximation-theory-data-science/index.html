@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a8d7abd0e867721538835a3fe1e9958e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-15b76ce954102de652f351fd8e1ceff4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a8d7abd0e867721538835a3fe1e9958e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-fc7cc9eb68d4cc25b4f77f3bdca4ebaa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -314,7 +314,6 @@ window.Quarto = {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Application of Approximation Theory in Data Science</h1>
-            <p class="subtitle lead">Viewing Machine Learning through the Lens of Numerical Analysis</p>
                   <div>
         <div class="description">
           Exploring how approximation theory serves as the mathematical backbone of modern machine learning and data fitting techniques.
@@ -375,7 +374,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#final-simulation-reconstructing-a-complex-signal" id="toc-final-simulation-reconstructing-a-complex-signal" class="nav-link" data-scroll-target="#final-simulation-reconstructing-a-complex-signal">Final Simulation: Reconstructing a Complex Signal</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="approximation-data-science.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -389,8 +388,6 @@ window.Quarto = {
 
 
 
-<p><strong>Instructor:</strong> Dr.&nbsp;Najmeh Hosseini Monjezi<br>
-<strong>University:</strong> University of Isfahan</p>
 <section id="introduction-connecting-math-to-reality" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-connecting-math-to-reality">Introduction: Connecting Math to Reality</h2>
 <p>In quantitative analysis, we face a constant challenge: Reality is complex, but we need simple functions to model it. This is exactly what <strong>Approximation Theory</strong> is about.</p>
@@ -447,7 +444,7 @@ V = \begin{bmatrix}
 <p><strong>1. Underfitting (High Bias):</strong> If the model is too simple (Degree 1), we miss the pattern entirely.</p>
 <div id="cell-fig-underfitting" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<div id="fig-underfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
+<div id="fig-underfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" height="510" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-underfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-underfitting-output-1.png" id="fig-underfitting" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
@@ -463,7 +460,7 @@ Figure&nbsp;1
 <p><strong>2. Optimal Fit:</strong> A degree 2 polynomial hits the sweet spot, capturing the trend without memorizing noise.</p>
 <div id="cell-fig-optimal-fit" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<div id="fig-optimal-fit" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
+<div id="fig-optimal-fit" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" height="510" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-optimal-fit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-optimal-fit-output-1.png" id="fig-optimal-fit" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
@@ -479,7 +476,7 @@ Figure&nbsp;2
 <p><strong>3. Overfitting (High Variance):</strong> If the degree is too high (e.g., 15), the model connects the dots blindly, capturing noise instead of the signal.</p>
 <div id="cell-fig-overfitting" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
-<div id="fig-overfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
+<div id="fig-overfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" height="510" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-overfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-overfitting-output-1.png" id="fig-overfitting" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
@@ -498,7 +495,7 @@ Figure&nbsp;3
 <p>To find the right degree (<span class="math inline">\(n\)</span>), we look at the <strong>Mean Squared Error (MSE)</strong>. As complexity goes up, training error always drops, but test error (generalization) will eventually spike.</p>
 <div id="cell-fig-bias-variance" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
-<div id="fig-bias-variance" class="quarto-float quarto-figure quarto-figure-center anchored" width="822" data-fig-align="center" height="449">
+<div id="fig-bias-variance" class="quarto-float quarto-figure quarto-figure-center anchored" width="822" height="449" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bias-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-bias-variance-output-1.png" id="fig-bias-variance" class="quarto-figure quarto-figure-center anchored figure-img" width="822" height="449">
@@ -519,7 +516,7 @@ Figure&nbsp;4
 <p>Mathematically, nothing changes. We solve the same normal equations, just with a larger matrix <span class="math inline">\(A\)</span>.</p>
 <div id="cell-fig-multiple-regression" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
-<div id="fig-multiple-regression" class="quarto-float quarto-figure quarto-figure-center anchored" width="408" data-fig-align="center" height="417">
+<div id="fig-multiple-regression" class="quarto-float quarto-figure quarto-figure-center anchored" width="408" height="417" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-multiple-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-multiple-regression-output-1.png" id="fig-multiple-regression" class="quarto-figure quarto-figure-center anchored figure-img" width="408" height="417">
@@ -553,7 +550,7 @@ Figure&nbsp;5
 </ol>
 <div id="cell-fig-basis-correlation" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
-<div id="fig-basis-correlation" class="quarto-float quarto-figure quarto-figure-center anchored" width="1123" data-fig-align="center" height="469">
+<div id="fig-basis-correlation" class="quarto-float quarto-figure quarto-figure-center anchored" width="1123" height="469" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-basis-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-basis-correlation-output-1.png" id="fig-basis-correlation" class="quarto-figure quarto-figure-center anchored figure-img" width="1123" height="469">
@@ -572,7 +569,7 @@ Figure&nbsp;6
 <p>To show the power of Continuous Least Squares, let’s reconstruct a complex signal (mixed sine, cosine, and exponentials) using Legendre polynomials. Because of orthogonality, we can compute the “contribution” of each degree independently.</p>
 <div id="cell-fig-continuous-reconstruction" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
-<div id="fig-continuous-reconstruction" class="quarto-float quarto-figure quarto-figure-center anchored" width="954" data-fig-align="center" height="523">
+<div id="fig-continuous-reconstruction" class="quarto-float quarto-figure quarto-figure-center anchored" width="954" height="523" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-continuous-reconstruction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-continuous-reconstruction-output-1.png" id="fig-continuous-reconstruction" class="quarto-figure quarto-figure-center anchored figure-img" width="954" height="523">
@@ -585,11 +582,96 @@ Figure&nbsp;7
 </div>
 </div>
 <p>This process highlights the elegance of the math: by projecting complex realities onto simpler orthogonal structures, we get both speed and clarity.</p>
+<hr>
+<p><strong>Course Info:</strong></p>
+<ul>
+<li><p><strong>Instructor:</strong> Dr.&nbsp;Najmeh Hosseini Monjezi</p></li>
+<li><p><strong>University:</strong> University of Isfahan</p></li>
+</ul>
 
 
 </section>
 
 </main> <!-- /main -->
+<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_744857c389456e637eea3283f79e8e"></script>
+
+
+
+<style>
+
+  /* این استایل باعث می‌شود دکمه‌ها در تم تیره سفید دیده شوند */
+
+  [data-lyket-type] svg {
+
+    fill: #ffffff !important;
+
+    stroke: #ffffff !important;
+
+  }
+
+  [data-lyket-type] {
+
+    color: #ffffff !important;
+
+  }
+
+</style>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const contentBody = document.getElementById('quarto-document-content');
+
+
+
+  if (contentBody) {
+
+    const wrapper = document.createElement('div');
+
+    // رنگ متن را هم سفیدتر کردم که بهتر دیده شود
+
+    wrapper.style.cssText = "margin-top: 3rem; margin-bottom: 2rem; padding-top: 1rem; border-top: 1px solid #444; text-align: center;";
+
+    
+
+    const text = document.createElement('div');
+
+    text.innerText = "اگر این مطلب مفید بود، لایک کنید:";
+
+    text.style.cssText = "font-size: 0.9rem; color: #aaa; margin-bottom: 15px; font-family: sans-serif;";
+
+    wrapper.appendChild(text);
+
+
+
+    const btn = document.createElement('div');
+
+    btn.setAttribute('data-lyket-type', 'clap');
+
+    btn.setAttribute('data-lyket-id', window.location.pathname);
+
+    btn.setAttribute('data-lyket-namespace', 'blog-post');
+
+    btn.setAttribute('data-lyket-template', 'twitter'); // قالب توییتر معمولاً خوش‌قلق‌تر است
+
+    btn.setAttribute('data-lyket-font-family', 'inherit');
+
+    btn.setAttribute('data-lyket-show-counter-from', '0');
+
+
+
+    wrapper.appendChild(btn);
+
+    contentBody.appendChild(wrapper);
+
+  }
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

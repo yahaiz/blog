@@ -80,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a8d7abd0e867721538835a3fe1e9958e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-15b76ce954102de652f351fd8e1ceff4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a8d7abd0e867721538835a3fe1e9958e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-fc7cc9eb68d4cc25b4f77f3bdca4ebaa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -370,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#full-code-example" id="toc-full-code-example" class="nav-link" data-scroll-target="#full-code-example">💻 Full Code Example</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="java-scanner.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="java-scanner-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -509,6 +509,85 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 </main> <!-- /main -->
+<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_744857c389456e637eea3283f79e8e"></script>
+
+
+
+<style>
+
+  /* این استایل باعث می‌شود دکمه‌ها در تم تیره سفید دیده شوند */
+
+  [data-lyket-type] svg {
+
+    fill: #ffffff !important;
+
+    stroke: #ffffff !important;
+
+  }
+
+  [data-lyket-type] {
+
+    color: #ffffff !important;
+
+  }
+
+</style>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const contentBody = document.getElementById('quarto-document-content');
+
+
+
+  if (contentBody) {
+
+    const wrapper = document.createElement('div');
+
+    // رنگ متن را هم سفیدتر کردم که بهتر دیده شود
+
+    wrapper.style.cssText = "margin-top: 3rem; margin-bottom: 2rem; padding-top: 1rem; border-top: 1px solid #444; text-align: center;";
+
+    
+
+    const text = document.createElement('div');
+
+    text.innerText = "اگر این مطلب مفید بود، لایک کنید:";
+
+    text.style.cssText = "font-size: 0.9rem; color: #aaa; margin-bottom: 15px; font-family: sans-serif;";
+
+    wrapper.appendChild(text);
+
+
+
+    const btn = document.createElement('div');
+
+    btn.setAttribute('data-lyket-type', 'clap');
+
+    btn.setAttribute('data-lyket-id', window.location.pathname);
+
+    btn.setAttribute('data-lyket-namespace', 'blog-post');
+
+    btn.setAttribute('data-lyket-template', 'twitter'); // قالب توییتر معمولاً خوش‌قلق‌تر است
+
+    btn.setAttribute('data-lyket-font-family', 'inherit');
+
+    btn.setAttribute('data-lyket-show-counter-from', '0');
+
+
+
+    wrapper.appendChild(btn);
+
+    contentBody.appendChild(wrapper);
+
+  }
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
