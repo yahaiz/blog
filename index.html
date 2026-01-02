@@ -413,7 +413,7 @@ Yahya Izadi
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="SmF2YSUyQ1Byb2dyYW1taW5nJTJDQmVnaW5uZXJzJTJDVHV0b3JpYWw=" data-listing-date-sort="1763929800000" data-listing-file-modified-sort="1767388868775" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="564">
+<div class="quarto-post image-right" data-index="1" data-categories="SmF2YSUyQ1Byb2dyYW1taW5nJTJDQmVnaW5uZXJzJTJDVHV0b3JpYWw=" data-listing-date-sort="1763929800000" data-listing-file-modified-sort="1767390091508" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="564">
 <div class="thumbnail"><a href="./posts/java-scanner/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/java-scanner/java-scanner.png" class="thumbnail-image">
@@ -868,6 +868,38 @@ Yahya Izadi, Pooyan Motamedi
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "yahaiz/blog";
+    script.dataset.repoId = "R_kgDOQX-rMQ";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOQX-rMc4C0gI7";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 

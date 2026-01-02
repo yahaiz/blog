@@ -593,87 +593,6 @@ Figure&nbsp;7
 </section>
 
 </main> <!-- /main -->
-<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_744857c389456e637eea3283f79e8e"></script>
-
-
-
-<style>
-
-  /* استایل اجباری برای دیده شدن دکمه */
-
-  .lyket-button-wrapper button, 
-
-  .lyket-button-wrapper svg {
-
-     fill: #fff !important;      /* سفید کردن آیکون */
-
-     stroke: #fff !important;    /* سفید کردن خط دور */
-
-     color: #fff !important;     /* سفید کردن متن */
-
-  }
-
-</style>
-
-
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function() {
-
-  const contentBody = document.getElementById('quarto-document-content');
-
-
-
-  if (contentBody) {
-
-    const wrapper = document.createElement('div');
-
-    wrapper.style.cssText = "margin-top: 3rem; border-top: 1px solid #777; padding-top: 20px; text-align: center;";
-
-    
-
-    // متن
-
-    const text = document.createElement('p');
-
-    text.innerText = "اگر این مطلب مفید بود، لایک کنید:";
-
-    text.style.cssText = "color: #aaa; margin-bottom: 10px;";
-
-    wrapper.appendChild(text);
-
-
-
-    // دکمه
-
-    const btn = document.createElement('div');
-
-    btn.setAttribute('data-lyket-type', 'clap');
-
-    btn.setAttribute('data-lyket-id', window.location.pathname);
-
-    btn.setAttribute('data-lyket-namespace', 'blog-post');
-
-    btn.setAttribute('data-lyket-template', 'twitter');
-
-    btn.setAttribute('data-lyket-show-counter-from', '0');
-
-    
-
-    btn.classList.add('lyket-button-wrapper');
-
-
-
-    wrapper.appendChild(btn);
-
-    contentBody.appendChild(wrapper);
-
-  }
-
-});
-
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1087,6 +1006,38 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "yahaiz/blog";
+    script.dataset.repoId = "R_kgDOQX-rMQ";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOQX-rMc4C0gI7";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 
 
