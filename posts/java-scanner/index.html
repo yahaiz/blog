@@ -515,19 +515,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <style>
 
-  /* این استایل باعث می‌شود دکمه‌ها در تم تیره سفید دیده شوند */
+  /* استایل اجباری برای دیده شدن دکمه */
 
-  [data-lyket-type] svg {
+  .lyket-button-wrapper button, 
 
-    fill: #ffffff !important;
+  .lyket-button-wrapper svg {
 
-    stroke: #ffffff !important;
+     fill: #fff !important;      /* سفید کردن آیکون */
 
-  }
+     stroke: #fff !important;    /* سفید کردن خط دور */
 
-  [data-lyket-type] {
-
-    color: #ffffff !important;
+     color: #fff !important;     /* سفید کردن متن */
 
   }
 
@@ -547,21 +545,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const wrapper = document.createElement('div');
 
-    // رنگ متن را هم سفیدتر کردم که بهتر دیده شود
-
-    wrapper.style.cssText = "margin-top: 3rem; margin-bottom: 2rem; padding-top: 1rem; border-top: 1px solid #444; text-align: center;";
+    wrapper.style.cssText = "margin-top: 3rem; border-top: 1px solid #777; padding-top: 20px; text-align: center;";
 
     
 
-    const text = document.createElement('div');
+    // متن
+
+    const text = document.createElement('p');
 
     text.innerText = "اگر این مطلب مفید بود، لایک کنید:";
 
-    text.style.cssText = "font-size: 0.9rem; color: #aaa; margin-bottom: 15px; font-family: sans-serif;";
+    text.style.cssText = "color: #aaa; margin-bottom: 10px;";
 
     wrapper.appendChild(text);
 
 
+
+    // دکمه
 
     const btn = document.createElement('div');
 
@@ -571,11 +571,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     btn.setAttribute('data-lyket-namespace', 'blog-post');
 
-    btn.setAttribute('data-lyket-template', 'twitter'); // قالب توییتر معمولاً خوش‌قلق‌تر است
-
-    btn.setAttribute('data-lyket-font-family', 'inherit');
+    btn.setAttribute('data-lyket-template', 'twitter');
 
     btn.setAttribute('data-lyket-show-counter-from', '0');
+
+    
+
+    btn.classList.add('lyket-button-wrapper');
 
 
 
