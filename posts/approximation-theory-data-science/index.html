@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Yahya Izadi">
-<meta name="author" content="Pooyan Motamediquarto">
-<meta name="dcterms.date" content="2025-11-24">
+<meta name="dcterms.date" content="2025-12-30">
+<meta name="description" content="Exploring how approximation theory serves as the mathematical backbone of modern machine learning and data fitting techniques.">
 
-<title>Java Scanner: The Ultimate Beginner’s Guide – Yahya Izadi</title>
+<title>Application of Approximation Theory in Data Science – Yahya Izadi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,41 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -110,8 +75,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<meta name="quarto:status" content="draft">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -280,7 +273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -320,13 +313,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Java Scanner: The Ultimate Beginner’s Guide</h1>
-            <p class="subtitle lead">How to make your Java programs listen to the user</p>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Java</div>
-                <div class="quarto-category">Programming</div>
-                <div class="quarto-category">Beginners</div>
-                <div class="quarto-category">Tutorial</div>
+      <h1 class="title">Application of Approximation Theory in Data Science</h1>
+            <p class="subtitle lead">Viewing Machine Learning through the Lens of Numerical Analysis</p>
+                  <div>
+        <div class="description">
+          Exploring how approximation theory serves as the mathematical backbone of modern machine learning and data fitting techniques.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Data Science</div>
+                <div class="quarto-category">Machine Learning</div>
+                <div class="quarto-category">Numerical Analysis</div>
+                <div class="quarto-category">Mathematics</div>
               </div>
                   </div>
   </div>
@@ -335,17 +333,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
                <p>Yahya Izadi </p>
-               <p>Pooyan Motamediquarto </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 24, 2025</p>
+        <p class="date">December 30, 2025</p>
       </div>
     </div>
     
@@ -360,18 +357,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-making-your-code-listen" id="toc-introduction-making-your-code-listen" class="nav-link active" data-scroll-target="#introduction-making-your-code-listen">Introduction: Making Your Code “Listen”</a></li>
-  <li><a href="#the-3-golden-steps" id="toc-the-3-golden-steps" class="nav-link" data-scroll-target="#the-3-golden-steps">The 3 Golden Steps</a>
+  <li><a href="#introduction-connecting-math-to-reality" id="toc-introduction-connecting-math-to-reality" class="nav-link active" data-scroll-target="#introduction-connecting-math-to-reality">Introduction: Connecting Math to Reality</a></li>
+  <li><a href="#the-discrete-problem-linear-algebra-and-regression" id="toc-the-discrete-problem-linear-algebra-and-regression" class="nav-link" data-scroll-target="#the-discrete-problem-linear-algebra-and-regression">The Discrete Problem: Linear Algebra and Regression</a>
   <ul class="collapse">
-  <li><a href="#step-1-import-the-tool" id="toc-step-1-import-the-tool" class="nav-link" data-scroll-target="#step-1-import-the-tool">Step 1: Import the Tool</a></li>
-  <li><a href="#step-2-create-the-scanner-object" id="toc-step-2-create-the-scanner-object" class="nav-link" data-scroll-target="#step-2-create-the-scanner-object">Step 2: Create the Scanner Object</a></li>
-  <li><a href="#step-3-read-the-data" id="toc-step-3-read-the-data" class="nav-link" data-scroll-target="#step-3-read-the-data">Step 3: Read the Data</a></li>
+  <li><a href="#the-overdetermined-system" id="toc-the-overdetermined-system" class="nav-link" data-scroll-target="#the-overdetermined-system">The Overdetermined System</a></li>
   </ul></li>
-  <li><a href="#cheat-sheet-which-command-to-use" id="toc-cheat-sheet-which-command-to-use" class="nav-link" data-scroll-target="#cheat-sheet-which-command-to-use">Cheat Sheet: Which Command to Use?</a></li>
-  <li><a href="#full-code-example" id="toc-full-code-example" class="nav-link" data-scroll-target="#full-code-example">💻 Full Code Example</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#feature-engineering-and-the-vandermonde-matrix" id="toc-feature-engineering-and-the-vandermonde-matrix" class="nav-link" data-scroll-target="#feature-engineering-and-the-vandermonde-matrix">Feature Engineering and the Vandermonde Matrix</a>
+  <ul class="collapse">
+  <li><a href="#visualizing-the-bias-variance-tradeoff" id="toc-visualizing-the-bias-variance-tradeoff" class="nav-link" data-scroll-target="#visualizing-the-bias-variance-tradeoff">Visualizing the Bias-Variance Tradeoff</a></li>
+  <li><a href="#selecting-the-best-model" id="toc-selecting-the-best-model" class="nav-link" data-scroll-target="#selecting-the-best-model">Selecting the Best Model</a></li>
+  </ul></li>
+  <li><a href="#beyond-2d-multiple-regression" id="toc-beyond-2d-multiple-regression" class="nav-link" data-scroll-target="#beyond-2d-multiple-regression">Beyond 2D: Multiple Regression</a></li>
+  <li><a href="#the-continuous-problem-signal-processing" id="toc-the-continuous-problem-signal-processing" class="nav-link" data-scroll-target="#the-continuous-problem-signal-processing">The Continuous Problem: Signal Processing</a>
+  <ul class="collapse">
+  <li><a href="#minimizing-the-integral" id="toc-minimizing-the-integral" class="nav-link" data-scroll-target="#minimizing-the-integral">Minimizing the Integral</a></li>
+  <li><a href="#the-trap-standard-basis-vs.-orthogonality" id="toc-the-trap-standard-basis-vs.-orthogonality" class="nav-link" data-scroll-target="#the-trap-standard-basis-vs.-orthogonality">The Trap: Standard Basis vs.&nbsp;Orthogonality</a></li>
+  </ul></li>
+  <li><a href="#final-simulation-reconstructing-a-complex-signal" id="toc-final-simulation-reconstructing-a-complex-signal" class="nav-link" data-scroll-target="#final-simulation-reconstructing-a-complex-signal">Final Simulation: Reconstructing a Complex Signal</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="java-scanner.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="approximation-data-science.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -385,130 +389,202 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="introduction-making-your-code-listen" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-making-your-code-listen">Introduction: Making Your Code “Listen”</h2>
-<p>By default, the Java code you write is <strong>“deaf.”</strong> It executes commands, does calculations, and prints results, but it cannot hear what the user wants to say.</p>
-<p>The <strong><code>Scanner</code></strong> class is like a hearing aid or a translator. It allows your program to read input from the keyboard (Standard Input) and store it in variables.</p>
-<hr>
-</section>
-<section id="the-3-golden-steps" class="level2">
-<h2 class="anchored" data-anchor-id="the-3-golden-steps">The 3 Golden Steps</h2>
-<p>To use the Scanner, you must always follow these three steps in order. Memorize this pattern!</p>
-<section id="step-1-import-the-tool" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-import-the-tool">Step 1: Import the Tool</h3>
-<p>Java keeps the Scanner in a utility package to keep things organized. You must import it at the very top of your file.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="step-2-create-the-scanner-object" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-create-the-scanner-object">Step 2: Create the Scanner Object</h3>
-<p>Inside your <code>main</code> method, you need to create an instance of the Scanner. We usually call it <code>input</code> or <code>scanner</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// System.in represents the keyboard</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">Scanner</span> input <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="step-3-read-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-read-the-data">Step 3: Read the Data</h3>
-<p>Now, you command the scanner to wait for input and store it in a variable.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> age <span class="op">=</span> input<span class="op">.</span><span class="fu">nextInt</span><span class="op">();</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-</section>
-<section id="cheat-sheet-which-command-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="cheat-sheet-which-command-to-use">Cheat Sheet: Which Command to Use?</h2>
-<p>Depending on the <strong>Data Type</strong> you want to read, you must use a specific command (method).</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Data Type</th>
-<th style="text-align: left;">Method</th>
-<th style="text-align: left;">Example Use Case</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>int</code></td>
-<td style="text-align: left;"><code>input.nextInt()</code></td>
-<td style="text-align: left;">Age, Year, Quantity</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>double</code></td>
-<td style="text-align: left;"><code>input.nextDouble()</code></td>
-<td style="text-align: left;">Price, GPA, Salary</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>String</code></td>
-<td style="text-align: left;"><code>input.next()</code></td>
-<td style="text-align: left;">A single word (e.g., First Name)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>String</code></td>
-<td style="text-align: left;"><code>input.nextLine()</code></td>
-<td style="text-align: left;">A full sentence (e.g., Full Name)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>boolean</code></td>
-<td style="text-align: left;"><code>input.nextBoolean()</code></td>
-<td style="text-align: left;">True/False inputs</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="full-code-example" class="level2">
-<h2 class="anchored" data-anchor-id="full-code-example">💻 Full Code Example</h2>
-<p>Here is a complete, runnable program. It asks for user details and prints them back.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span> <span class="co">// Step 1</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Main <span class="op">{</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Step 2: Create the Scanner</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Scanner</span> input <span class="op">=</span> <span class="kw">new</span> <span class="bu">Scanner</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">in</span><span class="op">);</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Step 3: Ask and Read</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"Enter your age: "</span><span class="op">);</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> age <span class="op">=</span> input<span class="op">.</span><span class="fu">nextInt</span><span class="op">();</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">print</span><span class="op">(</span><span class="st">"Enter your GPA: "</span><span class="op">);</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> gpa <span class="op">=</span> input<span class="op">.</span><span class="fu">nextDouble</span><span class="op">();</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"--- Result ---"</span><span class="op">);</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"Age: "</span> <span class="op">+</span> age<span class="op">);</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">"GPA: "</span> <span class="op">+</span> gpa<span class="op">);</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>⚠️ The Common “New Line” Trap
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>There is a famous bug that confuses every beginner.</p>
-<p>If you use <code>nextInt()</code> (to read a number) and <strong>immediately</strong> afterwards use <code>nextLine()</code> (to read text), the Scanner will <strong>skip</strong> the text input!</p>
-<p><strong>Why?</strong> When you type a number and hit <strong>Enter</strong>, <code>nextInt()</code> takes the number but leaves the “Enter” key press (newline character) in the memory. The next <code>nextLine()</code> reads that leftover “Enter” and thinks you finished typing.</p>
-<p><strong>The Fix:</strong> Add an extra <code>nextLine()</code> just to consume the leftover “Enter”.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> id <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextInt</span><span class="op">();</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">// Fix: Consume the leftover newline</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span> </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> name <span class="op">=</span> scanner<span class="op">.</span><span class="fu">nextLine</span><span class="op">();</span> <span class="co">// Now this works!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<hr>
-</section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p><strong>Instructor:</strong> Dr.&nbsp;Najmeh Hosseini Monjezi<br>
+<strong>University:</strong> University of Isfahan</p>
+<section id="introduction-connecting-math-to-reality" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-connecting-math-to-reality">Introduction: Connecting Math to Reality</h2>
+<p>In quantitative analysis, we face a constant challenge: Reality is complex, but we need simple functions to model it. This is exactly what <strong>Approximation Theory</strong> is about.</p>
+<p>While it has roots in Numerical Analysis, for us in Data Science, it boils down to two main tasks:</p>
 <ol type="1">
-<li><strong>Import</strong> <code>java.util.Scanner</code>.</li>
-<li><strong>Create</strong> <code>new Scanner(System.in)</code>.</li>
-<li><strong>Use</strong> <code>nextInt()</code>, <code>nextDouble()</code>, or <code>nextLine()</code> based on the variable type.</li>
-<li><strong>Watch out</strong> for the newline trap when switching from numbers to text!</li>
+<li><p><strong>Simplification:</strong> Turning heavy functions (like complex exponentials) into easy-to-handle polynomials.</p></li>
+<li><p><strong>Data Fitting:</strong> Finding a curve that best represents a set of scattered data points.</p></li>
 </ol>
-<p>Happy Coding! 🚀</p>
+<p>In modern Data Science, “Data Fitting” isn’t just theory—it is the backbone of <strong>Supervised Learning</strong>.</p>
+</section>
+<section id="the-discrete-problem-linear-algebra-and-regression" class="level2">
+<h2 class="anchored" data-anchor-id="the-discrete-problem-linear-algebra-and-regression">The Discrete Problem: Linear Algebra and Regression</h2>
+<p>Let’s start with a classic scenario: we have a dataset comparing <strong>Marketing Budget (<span class="math inline">\(x\)</span>)</strong> to <strong>Sales (<span class="math inline">\(y\)</span>)</strong>. We want to find a function <span class="math inline">\(f(x)\)</span> so that for our data, <span class="math inline">\(f(x_i) \approx y_i\)</span>.</p>
+<p>If we assume the relationship is linear, we are essentially trying to solve this system:</p>
+<p><span class="math display">\[
+\begin{cases}
+a x_1 + b = y_1 \\
+\vdots \\
+a x_m + b = y_m
+\end{cases}
+\implies A\mathbf{x} = \mathbf{b}
+\]</span></p>
+<section id="the-overdetermined-system" class="level3">
+<h3 class="anchored" data-anchor-id="the-overdetermined-system">The Overdetermined System</h3>
+<p>Here is the catch: in data science, we almost always have more data points (<span class="math inline">\(m\)</span>) than variables (<span class="math inline">\(n\)</span>). This creates an <strong>overdetermined system</strong>, meaning there is no exact solution for <span class="math inline">\(Ax=b\)</span>.</p>
+<p>To fix this, we use <strong>Discrete Least Squares</strong>. Instead of chasing an impossible exact solution, we minimize the error (the Euclidean norm of the residual <span class="math inline">\(\mathbf{r} = \mathbf{b} - A\mathbf{x}\)</span>):</p>
+<p><span class="math display">\[\min_{\mathbf{x}} \| A\mathbf{x} - \mathbf{b} \|_2^2\]</span></p>
+<p>Calculus gives us the answer where the gradient is zero, leading to the famous <strong>Normal Equations</strong>:</p>
+<p><span class="math display">\[A^T A \mathbf{x} = A^T \mathbf{b}\]</span></p>
+<p>This single equation is the engine behind Linear Regression and many machine learning techniques we use daily.</p>
+</section>
+</section>
+<section id="feature-engineering-and-the-vandermonde-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="feature-engineering-and-the-vandermonde-matrix">Feature Engineering and the Vandermonde Matrix</h2>
+<p>Often, a straight line doesn’t cut it. We might suspect a quadratic relationship: <span class="math inline">\(P(x) = a_0 + a_1 x + a_2 x^2\)</span>. This allows us to ask deeper questions:</p>
+<ol type="1">
+<li><p>What are the base sales? (<span class="math inline">\(a_0\)</span>)</p></li>
+<li><p>How does the budget drive sales? (<span class="math inline">\(a_1\)</span>)</p></li>
+<li><p>Does the budget lose effectiveness over time? (<span class="math inline">\(a_2\)</span>)</p></li>
+</ol>
+<p>To solve this, we build the <strong>Vandermonde Matrix</strong> to hold our features:</p>
+<p><span class="math display">\[
+V = \begin{bmatrix}
+1 &amp; x_1 &amp; x_1^2 \\
+1 &amp; x_2 &amp; x_2^2 \\
+\vdots &amp; \vdots &amp; \vdots \\
+1 &amp; x_m &amp; x_m^2
+\end{bmatrix}
+\]</span></p>
+<p><strong>Interpretation:</strong> If <span class="math inline">\(a_2\)</span> turns out negative, we have mathematically proven “Diminishing Returns.”</p>
+<section id="visualizing-the-bias-variance-tradeoff" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-the-bias-variance-tradeoff">Visualizing the Bias-Variance Tradeoff</h3>
+<p>Choosing the right model complexity is tricky.</p>
+<p><strong>1. Underfitting (High Bias):</strong> If the model is too simple (Degree 1), we miss the pattern entirely.</p>
+<div id="cell-fig-underfitting" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div id="fig-underfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-underfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-underfitting-output-1.png" id="fig-underfitting" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-underfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<p><strong>2. Optimal Fit:</strong> A degree 2 polynomial hits the sweet spot, capturing the trend without memorizing noise.</p>
+<div id="cell-fig-optimal-fit" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="fig-optimal-fit" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-optimal-fit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-optimal-fit-output-1.png" id="fig-optimal-fit" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-optimal-fit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<p><strong>3. Overfitting (High Variance):</strong> If the degree is too high (e.g., 15), the model connects the dots blindly, capturing noise instead of the signal.</p>
+<div id="cell-fig-overfitting" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div id="fig-overfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-overfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-overfitting-output-1.png" id="fig-overfitting" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-overfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="selecting-the-best-model" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-the-best-model">Selecting the Best Model</h3>
+<p>To find the right degree (<span class="math inline">\(n\)</span>), we look at the <strong>Mean Squared Error (MSE)</strong>. As complexity goes up, training error always drops, but test error (generalization) will eventually spike.</p>
+<div id="cell-fig-bias-variance" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="fig-bias-variance" class="quarto-float quarto-figure quarto-figure-center anchored" width="822" data-fig-align="center" height="449">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bias-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-bias-variance-output-1.png" id="fig-bias-variance" class="quarto-figure quarto-figure-center anchored figure-img" width="822" height="449">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-bias-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="beyond-2d-multiple-regression" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-2d-multiple-regression">Beyond 2D: Multiple Regression</h2>
+<p>Real-world problems rarely have just one variable. Suppose we add <strong>Competitor’s Price (<span class="math inline">\(z\)</span>)</strong>. Now, our model is a plane in 3D: <span class="math inline">\(y = a_0 + a_1 x + a_2 z\)</span>.</p>
+<p>Mathematically, nothing changes. We solve the same normal equations, just with a larger matrix <span class="math inline">\(A\)</span>.</p>
+<div id="cell-fig-multiple-regression" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div id="fig-multiple-regression" class="quarto-float quarto-figure quarto-figure-center anchored" width="408" data-fig-align="center" height="417">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-multiple-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-multiple-regression-output-1.png" id="fig-multiple-regression" class="quarto-figure quarto-figure-center anchored figure-img" width="408" height="417">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-multiple-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="the-continuous-problem-signal-processing" class="level2">
+<h2 class="anchored" data-anchor-id="the-continuous-problem-signal-processing">The Continuous Problem: Signal Processing</h2>
+<p>Discrete data is standard in business, but fields like audio processing or ECG analysis deal with <strong>continuous signals</strong>. Here, we want to approximate a complex function <span class="math inline">\(f(x)\)</span> with a polynomial for compression or speed.</p>
+<section id="minimizing-the-integral" class="level3">
+<h3 class="anchored" data-anchor-id="minimizing-the-integral">Minimizing the Integral</h3>
+<p>Since we are dealing with functions, not points, we switch from summation to integration. We minimize the <strong>Integral of Squared Error</strong>:</p>
+<p><span class="math display">\[E = \| f - P_n \|_2^2 = \int_a^b (f(x) - P_n(x))^2 dx\]</span></p>
+</section>
+<section id="the-trap-standard-basis-vs.-orthogonality" class="level3">
+<h3 class="anchored" data-anchor-id="the-trap-standard-basis-vs.-orthogonality">The Trap: Standard Basis vs.&nbsp;Orthogonality</h3>
+<p>A beginner might try the standard basis (<span class="math inline">\(1, x, x^2, x^3\)</span>). Here is the problem: on the interval <span class="math inline">\([0, 1]\)</span>, <span class="math inline">\(x^2\)</span> and <span class="math inline">\(x^3\)</span> look very similar. They are highly correlated (multicollinearity). This confuses the model and makes coefficients unstable.</p>
+<p>The fix is <strong>Orthogonality</strong>. We need features that are independent, meaning their inner product is zero:</p>
+<p><span class="math display">\[\langle \phi_i, \phi_j \rangle = \int_a^b \phi_i(x) \phi_j(x) dx = 0 \quad (i \neq j)\]</span></p>
+<p>Orthogonal bases (like Legendre Polynomials) give us:</p>
+<ol type="1">
+<li><p><strong>Decoupling:</strong> We can calculate each coefficient separately.</p></li>
+<li><p><strong>Stability:</strong> Adding a higher-degree term doesn’t mess up the previous ones.</p></li>
+</ol>
+<div id="cell-fig-basis-correlation" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div id="fig-basis-correlation" class="quarto-float quarto-figure quarto-figure-center anchored" width="1123" data-fig-align="center" height="469">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-basis-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-basis-correlation-output-1.png" id="fig-basis-correlation" class="quarto-figure quarto-figure-center anchored figure-img" width="1123" height="469">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-basis-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="final-simulation-reconstructing-a-complex-signal" class="level2">
+<h2 class="anchored" data-anchor-id="final-simulation-reconstructing-a-complex-signal">Final Simulation: Reconstructing a Complex Signal</h2>
+<p>To show the power of Continuous Least Squares, let’s reconstruct a complex signal (mixed sine, cosine, and exponentials) using Legendre polynomials. Because of orthogonality, we can compute the “contribution” of each degree independently.</p>
+<div id="cell-fig-continuous-reconstruction" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div id="fig-continuous-reconstruction" class="quarto-float quarto-figure quarto-figure-center anchored" width="954" data-fig-align="center" height="523">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-continuous-reconstruction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-continuous-reconstruction-output-1.png" id="fig-continuous-reconstruction" class="quarto-figure quarto-figure-center anchored figure-img" width="954" height="523">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-continuous-reconstruction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>This process highlights the elegance of the math: by projecting complex realities onto simpler orthogonal structures, we get both speed and clarity.</p>
 
 
 </section>
