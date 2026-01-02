@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yahaiz.github.io/blog/index.html</loc>
-    <lastmod>2025-11-21T09:34:29.253Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/posts/scp/index.html</loc>
+    <lastmod>2026-01-02T07:36:35.250Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yahaiz.github.io/blog/posts/Java-Scanner/index.html</loc>
+    <lastmod>2025-11-24T17:37:42.911Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yahaiz.github.io/blog/posts/Java-Scanner/java-scanner-slides.html</loc>
+    <lastmod>2025-11-24T17:37:42.911Z</lastmod>
   </url>
   <url>
     <loc>https://yahaiz.github.io/blog/about.html</loc>
     <lastmod>2025-11-18T09:24:13.380Z</lastmod>
   </url>
   <url>
-    <loc>https://yahaiz.github.io/blog/posts/Java-Scanner/java-scanner-slides.html</loc>
-    <lastmod>2025-11-24T08:59:07.671Z</lastmod>
-  </url>
-  <url>
-    <loc>https://yahaiz.github.io/blog/posts/Java-Scanner/index.html</loc>
-    <lastmod>2025-11-24T08:59:07.671Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/index.html</loc>
+    <lastmod>2025-12-27T22:28:15.781Z</lastmod>
   </url>
 </urlset>

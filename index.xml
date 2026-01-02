@@ -10,7 +10,211 @@
 <atom:link href="https://yahaiz.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Sun, 23 Nov 2025 20:30:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 29 Dec 2025 20:30:00 GMT</lastBuildDate>
+<item>
+  <title>Application of Approximation Theory in Data Science</title>
+  <dc:creator>Yahya Izadi</dc:creator>
+  <link>https://yahaiz.github.io/blog/posts/scp/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="introduction-connecting-math-to-reality" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-connecting-math-to-reality">Introduction: Connecting Math to Reality</h2>
+<p>In quantitative analysis, we face a constant challenge: Reality is complex, but we need simple functions to model it. This is exactly what <strong>Approximation Theory</strong> is about.</p>
+<p>While it has roots in Numerical Analysis, for us in Data Science, it boils down to two main tasks:</p>
+<ol type="1">
+<li><p><strong>Simplification:</strong> Turning heavy functions (like complex exponentials) into easy-to-handle polynomials.</p></li>
+<li><p><strong>Data Fitting:</strong> Finding a curve that best represents a set of scattered data points.</p></li>
+</ol>
+<p>In modern Data Science, “Data Fitting” isn’t just theory—it is the backbone of <strong>Supervised Learning</strong>.</p>
+</section>
+<section id="the-discrete-problem-linear-algebra-and-regression" class="level2">
+<h2 class="anchored" data-anchor-id="the-discrete-problem-linear-algebra-and-regression">The Discrete Problem: Linear Algebra and Regression</h2>
+<p>Let’s start with a classic scenario: we have a dataset comparing <strong>Marketing Budget (<img src="https://latex.codecogs.com/png.latex?x">)</strong> to <strong>Sales (<img src="https://latex.codecogs.com/png.latex?y">)</strong>. We want to find a function <img src="https://latex.codecogs.com/png.latex?f(x)"> so that for our data, <img src="https://latex.codecogs.com/png.latex?f(x_i)%20%5Capprox%20y_i">.</p>
+<p>If we assume the relationship is linear, we are essentially trying to solve this system:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0Aa%20x_1%20+%20b%20=%20y_1%20%5C%5C%0A%5Cvdots%20%5C%5C%0Aa%20x_m%20+%20b%20=%20y_m%0A%5Cend%7Bcases%7D%0A%5Cimplies%20A%5Cmathbf%7Bx%7D%20=%20%5Cmathbf%7Bb%7D%0A"></p>
+<section id="the-overdetermined-system" class="level3">
+<h3 class="anchored" data-anchor-id="the-overdetermined-system">The Overdetermined System</h3>
+<p>Here is the catch: in data science, we almost always have more data points (<img src="https://latex.codecogs.com/png.latex?m">) than variables (<img src="https://latex.codecogs.com/png.latex?n">). This creates an <strong>overdetermined system</strong>, meaning there is no exact solution for <img src="https://latex.codecogs.com/png.latex?Ax=b">.</p>
+<p>To fix this, we use <strong>Discrete Least Squares</strong>. Instead of chasing an impossible exact solution, we minimize the error (the Euclidean norm of the residual <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Br%7D%20=%20%5Cmathbf%7Bb%7D%20-%20A%5Cmathbf%7Bx%7D">):</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cmin_%7B%5Cmathbf%7Bx%7D%7D%20%5C%7C%20A%5Cmathbf%7Bx%7D%20-%20%5Cmathbf%7Bb%7D%20%5C%7C_2%5E2"></p>
+<p>Calculus gives us the answer where the gradient is zero, leading to the famous <strong>Normal Equations</strong>:</p>
+<p><img src="https://latex.codecogs.com/png.latex?A%5ET%20A%20%5Cmathbf%7Bx%7D%20=%20A%5ET%20%5Cmathbf%7Bb%7D"></p>
+<p>This single equation is the engine behind Linear Regression and many machine learning techniques we use daily.</p>
+</section>
+</section>
+<section id="feature-engineering-and-the-vandermonde-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="feature-engineering-and-the-vandermonde-matrix">Feature Engineering and the Vandermonde Matrix</h2>
+<p>Often, a straight line doesn’t cut it. We might suspect a quadratic relationship: <img src="https://latex.codecogs.com/png.latex?P(x)%20=%20a_0%20+%20a_1%20x%20+%20a_2%20x%5E2">. This allows us to ask deeper questions:</p>
+<ol type="1">
+<li><p>What are the base sales? (<img src="https://latex.codecogs.com/png.latex?a_0">)</p></li>
+<li><p>How does the budget drive sales? (<img src="https://latex.codecogs.com/png.latex?a_1">)</p></li>
+<li><p>Does the budget lose effectiveness over time? (<img src="https://latex.codecogs.com/png.latex?a_2">)</p></li>
+</ol>
+<p>To solve this, we build the <strong>Vandermonde Matrix</strong> to hold our features:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AV%20=%20%5Cbegin%7Bbmatrix%7D%0A1%20&amp;%20x_1%20&amp;%20x_1%5E2%20%5C%5C%0A1%20&amp;%20x_2%20&amp;%20x_2%5E2%20%5C%5C%0A%5Cvdots%20&amp;%20%5Cvdots%20&amp;%20%5Cvdots%20%5C%5C%0A1%20&amp;%20x_m%20&amp;%20x_m%5E2%0A%5Cend%7Bbmatrix%7D%0A"></p>
+<p><strong>Interpretation:</strong> If <img src="https://latex.codecogs.com/png.latex?a_2"> turns out negative, we have mathematically proven “Diminishing Returns.”</p>
+<section id="visualizing-the-bias-variance-tradeoff" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-the-bias-variance-tradeoff">Visualizing the Bias-Variance Tradeoff</h3>
+<p>Choosing the right model complexity is tricky.</p>
+<p><strong>1. Underfitting (High Bias):</strong> If the model is too simple (Degree 1), we miss the pattern entirely.</p>
+<div id="cell-fig-underfitting" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div id="fig-underfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-underfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://yahaiz.github.io/blog/posts/scp/index_files/figure-html/fig-underfitting-output-1.png" id="fig-underfitting" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-underfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<p><strong>2. Optimal Fit:</strong> A degree 2 polynomial hits the sweet spot, capturing the trend without memorizing noise.</p>
+<div id="cell-fig-optimal-fit" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div id="fig-optimal-fit" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-optimal-fit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://yahaiz.github.io/blog/posts/scp/index_files/figure-html/fig-optimal-fit-output-1.png" id="fig-optimal-fit" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-optimal-fit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<p><strong>3. Overfitting (High Variance):</strong> If the degree is too high (e.g., 15), the model connects the dots blindly, capturing noise instead of the signal.</p>
+<div id="cell-fig-overfitting" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div id="fig-overfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-overfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://yahaiz.github.io/blog/posts/scp/index_files/figure-html/fig-overfitting-output-1.png" id="fig-overfitting" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-overfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="selecting-the-best-model" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-the-best-model">Selecting the Best Model</h3>
+<p>To find the right degree (<img src="https://latex.codecogs.com/png.latex?n">), we look at the <strong>Mean Squared Error (MSE)</strong>. As complexity goes up, training error always drops, but test error (generalization) will eventually spike.</p>
+<div id="cell-fig-bias-variance" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="fig-bias-variance" class="quarto-float quarto-figure quarto-figure-center anchored" width="822" data-fig-align="center" height="449">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bias-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://yahaiz.github.io/blog/posts/scp/index_files/figure-html/fig-bias-variance-output-1.png" id="fig-bias-variance" class="quarto-figure quarto-figure-center anchored figure-img" width="822" height="449">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-bias-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="beyond-2d-multiple-regression" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-2d-multiple-regression">Beyond 2D: Multiple Regression</h2>
+<p>Real-world problems rarely have just one variable. Suppose we add <strong>Competitor’s Price (<img src="https://latex.codecogs.com/png.latex?z">)</strong>. Now, our model is a plane in 3D: <img src="https://latex.codecogs.com/png.latex?y%20=%20a_0%20+%20a_1%20x%20+%20a_2%20z">.</p>
+<p>Mathematically, nothing changes. We solve the same normal equations, just with a larger matrix <img src="https://latex.codecogs.com/png.latex?A">.</p>
+<div id="cell-fig-multiple-regression" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div id="fig-multiple-regression" class="quarto-float quarto-figure quarto-figure-center anchored" width="408" data-fig-align="center" height="417">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-multiple-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://yahaiz.github.io/blog/posts/scp/index_files/figure-html/fig-multiple-regression-output-1.png" id="fig-multiple-regression" class="quarto-figure quarto-figure-center anchored figure-img" width="408" height="417">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-multiple-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="the-continuous-problem-signal-processing" class="level2">
+<h2 class="anchored" data-anchor-id="the-continuous-problem-signal-processing">The Continuous Problem: Signal Processing</h2>
+<p>Discrete data is standard in business, but fields like audio processing or ECG analysis deal with <strong>continuous signals</strong>. Here, we want to approximate a complex function <img src="https://latex.codecogs.com/png.latex?f(x)"> with a polynomial for compression or speed.</p>
+<section id="minimizing-the-integral" class="level3">
+<h3 class="anchored" data-anchor-id="minimizing-the-integral">Minimizing the Integral</h3>
+<p>Since we are dealing with functions, not points, we switch from summation to integration. We minimize the <strong>Integral of Squared Error</strong>:</p>
+<p><img src="https://latex.codecogs.com/png.latex?E%20=%20%5C%7C%20f%20-%20P_n%20%5C%7C_2%5E2%20=%20%5Cint_a%5Eb%20(f(x)%20-%20P_n(x))%5E2%20dx"></p>
+</section>
+<section id="the-trap-standard-basis-vs.-orthogonality" class="level3">
+<h3 class="anchored" data-anchor-id="the-trap-standard-basis-vs.-orthogonality">The Trap: Standard Basis vs.&nbsp;Orthogonality</h3>
+<p>A beginner might try the standard basis (<img src="https://latex.codecogs.com/png.latex?1,%20x,%20x%5E2,%20x%5E3">). Here is the problem: on the interval <img src="https://latex.codecogs.com/png.latex?%5B0,%201%5D">, <img src="https://latex.codecogs.com/png.latex?x%5E2"> and <img src="https://latex.codecogs.com/png.latex?x%5E3"> look very similar. They are highly correlated (multicollinearity). This confuses the model and makes coefficients unstable.</p>
+<p>The fix is <strong>Orthogonality</strong>. We need features that are independent, meaning their inner product is zero:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Clangle%20%5Cphi_i,%20%5Cphi_j%20%5Crangle%20=%20%5Cint_a%5Eb%20%5Cphi_i(x)%20%5Cphi_j(x)%20dx%20=%200%20%5Cquad%20(i%20%5Cneq%20j)"></p>
+<p>Orthogonal bases (like Legendre Polynomials) give us:</p>
+<ol type="1">
+<li><p><strong>Decoupling:</strong> We can calculate each coefficient separately.</p></li>
+<li><p><strong>Stability:</strong> Adding a higher-degree term doesn’t mess up the previous ones.</p></li>
+</ol>
+<div id="cell-fig-basis-correlation" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div id="fig-basis-correlation" class="quarto-float quarto-figure quarto-figure-center anchored" width="1123" data-fig-align="center" height="469">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-basis-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://yahaiz.github.io/blog/posts/scp/index_files/figure-html/fig-basis-correlation-output-1.png" id="fig-basis-correlation" class="quarto-figure quarto-figure-center anchored figure-img" width="1123" height="469">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-basis-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="final-simulation-reconstructing-a-complex-signal" class="level2">
+<h2 class="anchored" data-anchor-id="final-simulation-reconstructing-a-complex-signal">Final Simulation: Reconstructing a Complex Signal</h2>
+<p>To show the power of Continuous Least Squares, let’s reconstruct a complex signal (mixed sine, cosine, and exponentials) using Legendre polynomials. Because of orthogonality, we can compute the “contribution” of each degree independently.</p>
+<div id="cell-fig-continuous-reconstruction" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div id="fig-continuous-reconstruction" class="quarto-float quarto-figure quarto-figure-center anchored" width="954" data-fig-align="center" height="523">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-continuous-reconstruction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://yahaiz.github.io/blog/posts/scp/index_files/figure-html/fig-continuous-reconstruction-output-1.png" id="fig-continuous-reconstruction" class="quarto-figure quarto-figure-center anchored figure-img" width="954" height="523">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-continuous-reconstruction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>This process highlights the elegance of the math: by projecting complex realities onto simpler orthogonal structures, we get both speed and clarity.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Data Science</category>
+  <category>Machine Learning</category>
+  <category>Numerical Analysis</category>
+  <category>Mathematics</category>
+  <guid>https://yahaiz.github.io/blog/posts/scp/</guid>
+  <pubDate>Mon, 29 Dec 2025 20:30:00 GMT</pubDate>
+  <media:content url="https://yahaiz.github.io/blog/posts/scp/approximation-ds.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>Java Scanner: The Ultimate Beginner’s Guide</title>
   <dc:creator>Yahya Izadi</dc:creator>
@@ -126,6 +330,16 @@ font-style: inherit;">();</span></span></code></pre></div></div>
 <td style="text-align: left;"><code>int</code></td>
 <td style="text-align: left;"><code>input.nextInt()</code></td>
 <td style="text-align: left;">Whole numbers (Age, Year)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>long</code></td>
+<td style="text-align: left;"><code>input.nextLong()</code></td>
+<td style="text-align: left;">Large whole numbers (Population)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>float</code></td>
+<td style="text-align: left;"><code>input.nextFloat()</code></td>
+<td style="text-align: left;">Decimal numbers (Temperature)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>double</code></td>

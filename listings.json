@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/scp/index.html",
       "/posts/Java-Scanner/index.html"
     ]
   }
