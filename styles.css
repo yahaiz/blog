@@ -1,0 +1,36 @@
+.footer {
+  margin-top: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-size: 1.1em;
+}
+
+#quarto-back-to-top {
+  font-size: 0 !important;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  padding: 0 !important;
+  position: fixed !important;
+  bottom: 25px;
+  right: 25px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  color: #555;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+#quarto-back-to-top i {
+  font-size: 1.2rem !important;
+  vertical-align: middle;
+  margin: 0 !important;
+}
+
+#quarto-back-to-top:hover {
+  background-color: #f8f9fa;
+  opacity: 1;
+}

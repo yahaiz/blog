@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/stop-memorizing-syntax/index.html",
       "/posts/approximation-theory-data-science/index.html",
       "/posts/java-scanner/index.html"
     ]

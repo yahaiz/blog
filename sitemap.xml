@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yahaiz.github.io/blog/posts/java-scanner/index.html</loc>
-    <lastmod>2026-01-02T21:41:31.508Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/posts/stop-memorizing-syntax/index.html</loc>
+    <lastmod>2026-01-03T08:48:36.516Z</lastmod>
   </url>
   <url>
-    <loc>https://yahaiz.github.io/blog/index.html</loc>
-    <lastmod>2026-01-02T20:59:11.388Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/posts/approximation-theory-data-science/index.html</loc>
+    <lastmod>2026-01-02T21:22:00.713Z</lastmod>
   </url>
   <url>
     <loc>https://yahaiz.github.io/blog/about.html</loc>
     <lastmod>2025-11-18T09:24:13.380Z</lastmod>
   </url>
   <url>
-    <loc>https://yahaiz.github.io/blog/posts/approximation-theory-data-science/index.html</loc>
-    <lastmod>2026-01-02T21:22:00.713Z</lastmod>
+    <loc>https://yahaiz.github.io/blog/index.html</loc>
+    <lastmod>2026-01-03T08:53:33.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://yahaiz.github.io/blog/posts/java-scanner/index.html</loc>
+    <lastmod>2026-01-02T21:41:31.508Z</lastmod>
   </url>
 </urlset>
