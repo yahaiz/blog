@@ -49,16 +49,35 @@
 </ol>
 <section id="comparative-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="comparative-analysis">Comparative Analysis</h3>
-<p><strong>Example 1: Web Development</strong></p>
-<ul>
-<li><p><em>Vague:</em> <code>button not working</code></p></li>
-<li><p><em>Optimized:</em> <code>HTML button onclick event not firing in React</code></p></li>
-</ul>
-<p><strong>Example 2: Data Science</strong></p>
-<ul>
-<li><p><em>Vague:</em> <code>excel file error python</code></p></li>
-<li><p><em>Optimized:</em> <code>Pandas read_excel engine openpyxl dependency error</code></p></li>
-</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Domain</th>
+<th style="text-align: left;">❌ Bad Search (Vague)</th>
+<th style="text-align: left;">✅ Good Search (Specific)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Web Dev</strong></td>
+<td style="text-align: left;"><code>button not working</code></td>
+<td style="text-align: left;"><code>HTML button onclick event not firing in React</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Data Science</strong></td>
+<td style="text-align: left;"><code>excel file error python</code></td>
+<td style="text-align: left;"><code>Pandas read_excel engine openpyxl dependency error</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Ultimate Goal: Official Documentation</strong></p>
+<p>Google is not the answer; it is the vehicle to get you to the answer. Your goal should always be to land on the <strong>Official Documentation</strong> (e.g., MDN, Pandas Docs, Scikit-Learn Guide).</p>
+<p>Stack Overflow provides the <em>fix</em>, but the documentation provides the <em>understanding</em>. Treat the docs as the single source of truth to verify any solution you find.</p>
 </section>
 </section>
 <section id="google-search-operators-you-need-to-know" class="level2">
@@ -202,7 +221,7 @@
 <p><strong>1. Underfitting (High Bias):</strong> If the model is too simple (Degree 1), we miss the pattern entirely.</p>
 <div id="cell-fig-underfitting" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<div id="fig-underfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" height="510" data-fig-align="center">
+<div id="fig-underfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-underfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://yahaiz.github.io/blog/posts/approximation-theory-data-science/index_files/figure-html/fig-underfitting-output-1.png" id="fig-underfitting" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
@@ -218,7 +237,7 @@ Figure&nbsp;1
 <p><strong>2. Optimal Fit:</strong> A degree 2 polynomial hits the sweet spot, capturing the trend without memorizing noise.</p>
 <div id="cell-fig-optimal-fit" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<div id="fig-optimal-fit" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" height="510" data-fig-align="center">
+<div id="fig-optimal-fit" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-optimal-fit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://yahaiz.github.io/blog/posts/approximation-theory-data-science/index_files/figure-html/fig-optimal-fit-output-1.png" id="fig-optimal-fit" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
@@ -234,7 +253,7 @@ Figure&nbsp;2
 <p><strong>3. Overfitting (High Variance):</strong> If the degree is too high (e.g., 15), the model connects the dots blindly, capturing noise instead of the signal.</p>
 <div id="cell-fig-overfitting" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
-<div id="fig-overfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" height="510" data-fig-align="center">
+<div id="fig-overfitting" class="quarto-float quarto-figure quarto-figure-center anchored" width="794" data-fig-align="center" height="510">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-overfitting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://yahaiz.github.io/blog/posts/approximation-theory-data-science/index_files/figure-html/fig-overfitting-output-1.png" id="fig-overfitting" class="quarto-figure quarto-figure-center anchored figure-img" width="794" height="510">
@@ -253,7 +272,7 @@ Figure&nbsp;3
 <p>To find the right degree (<img src="https://latex.codecogs.com/png.latex?n">), we look at the <strong>Mean Squared Error (MSE)</strong>. As complexity goes up, training error always drops, but test error (generalization) will eventually spike.</p>
 <div id="cell-fig-bias-variance" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
-<div id="fig-bias-variance" class="quarto-float quarto-figure quarto-figure-center anchored" width="822" height="449" data-fig-align="center">
+<div id="fig-bias-variance" class="quarto-float quarto-figure quarto-figure-center anchored" width="822" data-fig-align="center" height="449">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bias-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://yahaiz.github.io/blog/posts/approximation-theory-data-science/index_files/figure-html/fig-bias-variance-output-1.png" id="fig-bias-variance" class="quarto-figure quarto-figure-center anchored figure-img" width="822" height="449">
@@ -274,7 +293,7 @@ Figure&nbsp;4
 <p>Mathematically, nothing changes. We solve the same normal equations, just with a larger matrix <img src="https://latex.codecogs.com/png.latex?A">.</p>
 <div id="cell-fig-multiple-regression" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
-<div id="fig-multiple-regression" class="quarto-float quarto-figure quarto-figure-center anchored" width="408" height="417" data-fig-align="center">
+<div id="fig-multiple-regression" class="quarto-float quarto-figure quarto-figure-center anchored" width="408" data-fig-align="center" height="417">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-multiple-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://yahaiz.github.io/blog/posts/approximation-theory-data-science/index_files/figure-html/fig-multiple-regression-output-1.png" id="fig-multiple-regression" class="quarto-figure quarto-figure-center anchored figure-img" width="408" height="417">
@@ -308,7 +327,7 @@ Figure&nbsp;5
 </ol>
 <div id="cell-fig-basis-correlation" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
-<div id="fig-basis-correlation" class="quarto-float quarto-figure quarto-figure-center anchored" width="1123" height="469" data-fig-align="center">
+<div id="fig-basis-correlation" class="quarto-float quarto-figure quarto-figure-center anchored" width="1123" data-fig-align="center" height="469">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-basis-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://yahaiz.github.io/blog/posts/approximation-theory-data-science/index_files/figure-html/fig-basis-correlation-output-1.png" id="fig-basis-correlation" class="quarto-figure quarto-figure-center anchored figure-img" width="1123" height="469">
@@ -327,7 +346,7 @@ Figure&nbsp;6
 <p>To show the power of Continuous Least Squares, let’s reconstruct a complex signal (mixed sine, cosine, and exponentials) using Legendre polynomials. Because of orthogonality, we can compute the “contribution” of each degree independently.</p>
 <div id="cell-fig-continuous-reconstruction" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
-<div id="fig-continuous-reconstruction" class="quarto-float quarto-figure quarto-figure-center anchored" width="954" height="523" data-fig-align="center">
+<div id="fig-continuous-reconstruction" class="quarto-float quarto-figure quarto-figure-center anchored" width="954" data-fig-align="center" height="523">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-continuous-reconstruction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://yahaiz.github.io/blog/posts/approximation-theory-data-science/index_files/figure-html/fig-continuous-reconstruction-output-1.png" id="fig-continuous-reconstruction" class="quarto-figure quarto-figure-center anchored figure-img" width="954" height="523">
