@@ -2,65 +2,79 @@
   {
     "objectID": "posts/stop-memorizing-syntax/index.html",
     "href": "posts/stop-memorizing-syntax/index.html",
-    "title": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach",
+    "title": "Stop Memorizing Syntax: The Art of Effective Googling",
     "section": "",
-    "text": "In the rapidly evolving landscape of technical disciplines—ranging from software development to data science and systems engineering—the definition of competency has shifted. Proficiency is no longer solely defined by the memorization of syntax, libraries, or statistical formulas, but rather by the ability to retrieve accurate information efficiently.\nWhether debugging a complex neural network in PyTorch or resolving a race condition in a distributed system, the mechanism of solving the unknown remains constant. This article outlines a systematic approach to “Search Engineering,” a critical methodology for reducing debugging time and ensuring the implementation of optimal solutions across all technical fields."
+    "text": "In the rapidly evolving landscape of technical disciplines—ranging from software development to data science and systems engineering—the definition of competency has shifted. Proficiency is no longer solely defined by the memorization of syntax, libraries, or statistical formulas, but rather by the ability to retrieve accurate information efficiently.\nWhether debugging a complex neural network in PyTorch or resolving a race condition in a distributed system, the mechanism of solving the unknown remains constant. This article outlines a systematic approach to effective Googling, a critical methodology for reducing debugging time and ensuring the implementation of optimal solutions across all technical fields."
   },
   {
     "objectID": "posts/stop-memorizing-syntax/index.html#introduction",
     "href": "posts/stop-memorizing-syntax/index.html#introduction",
-    "title": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach",
+    "title": "Stop Memorizing Syntax: The Art of Effective Googling",
     "section": "",
-    "text": "In the rapidly evolving landscape of technical disciplines—ranging from software development to data science and systems engineering—the definition of competency has shifted. Proficiency is no longer solely defined by the memorization of syntax, libraries, or statistical formulas, but rather by the ability to retrieve accurate information efficiently.\nWhether debugging a complex neural network in PyTorch or resolving a race condition in a distributed system, the mechanism of solving the unknown remains constant. This article outlines a systematic approach to “Search Engineering,” a critical methodology for reducing debugging time and ensuring the implementation of optimal solutions across all technical fields."
+    "text": "In the rapidly evolving landscape of technical disciplines—ranging from software development to data science and systems engineering—the definition of competency has shifted. Proficiency is no longer solely defined by the memorization of syntax, libraries, or statistical formulas, but rather by the ability to retrieve accurate information efficiently.\nWhether debugging a complex neural network in PyTorch or resolving a race condition in a distributed system, the mechanism of solving the unknown remains constant. This article outlines a systematic approach to effective Googling, a critical methodology for reducing debugging time and ensuring the implementation of optimal solutions across all technical fields."
   },
   {
-    "objectID": "posts/stop-memorizing-syntax/index.html#the-necessity-of-english-as-the-primary-technical-language",
-    "href": "posts/stop-memorizing-syntax/index.html#the-necessity-of-english-as-the-primary-technical-language",
-    "title": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach",
-    "section": "The Necessity of English as the Primary Technical Language",
-    "text": "The Necessity of English as the Primary Technical Language\nWhile localization exists, English remains the lingua franca of the global technology sector. The overwhelming majority of technical documentation, research papers, community discussions (Stack Overflow, Cross Validated), and repository issues are authored in English.\nSearching in a native language often introduces a translation layer that degrades query precision. Technical terms often lack accurate equivalents, or the translated terms yield results from a significantly smaller dataset.\nStrategic Recommendation:\nRegardless of linguistic proficiency, technical queries should be formulated in English to ensure access to the primary source of truth.\n\nIneffective: خطای اتصال دیتابیس (Limited dataset, potential ambiguity)\nEffective: Database connection timeout error (Direct mapping to technical terminology)"
+    "objectID": "posts/stop-memorizing-syntax/index.html#why-you-should-google-in-english",
+    "href": "posts/stop-memorizing-syntax/index.html#why-you-should-google-in-english",
+    "title": "Stop Memorizing Syntax: The Art of Effective Googling",
+    "section": "Why You Should Google in English",
+    "text": "Why You Should Google in English\nWhile localization exists, English remains the lingua franca of the global technology sector. The overwhelming majority of technical documentation, research papers, community discussions (Stack Overflow, Cross Validated), and repository issues are authored in English.\nSearching in a native language often introduces a translation layer that degrades query precision. Technical terms often lack accurate equivalents, or the translated terms yield results from a significantly smaller dataset.\nTip:\nRegardless of linguistic proficiency, technical queries should be formulated in English to ensure access to the primary source of truth.\n\nIneffective: خطای اتصال دیتابیس (Limited dataset, potential ambiguity)\nEffective: Database connection timeout error (Direct mapping to technical terminology)"
   },
   {
-    "objectID": "posts/stop-memorizing-syntax/index.html#structuring-optimal-search-queries",
-    "href": "posts/stop-memorizing-syntax/index.html#structuring-optimal-search-queries",
-    "title": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach",
-    "section": "Structuring Optimal Search Queries",
-    "text": "Structuring Optimal Search Queries\nSearch engines utilize keyword-matching algorithms. Providing a query in conversational language introduces noise that dilutes the relevance of the results. An optimal query acts as a filter, prioritizing context.\nA robust query structure typically consists of three components:\n\nThe Context: The language, framework, or library (e.g., Python, Pandas, React).\nThe Operation: What was being attempted (e.g., merge dataframes, render component).\nThe Symptom: The specific error or outcome (e.g., NaN values, infinite loop).\n\n\nComparative Analysis\nExample 1: Web Development\n\nVague: button not working\nOptimized: HTML button onclick event not firing in React\n\nExample 2: Data Science\n\nVague: excel file error python\nOptimized: Pandas read_excel engine openpyxl dependency error"
+    "objectID": "posts/stop-memorizing-syntax/index.html#anatomy-of-a-perfect-search-query",
+    "href": "posts/stop-memorizing-syntax/index.html#anatomy-of-a-perfect-search-query",
+    "title": "Stop Memorizing Syntax: The Art of Effective Googling",
+    "section": "Anatomy of a Perfect Search Query",
+    "text": "Anatomy of a Perfect Search Query\nSearch engines utilize keyword-matching algorithms. Providing a query in conversational language introduces noise that dilutes the relevance of the results. An optimal query acts as a filter, prioritizing context.\nA robust query structure typically consists of three components:\n\nThe Context: The language, framework, or library (e.g., Python, Pandas, React).\nThe Operation: What was being attempted (e.g., merge dataframes, render component).\nThe Symptom: The specific error or outcome (e.g., NaN values, infinite loop).\n\n\nComparative Analysis\nExample 1: Web Development\n\nVague: button not working\nOptimized: HTML button onclick event not firing in React\n\nExample 2: Data Science\n\nVague: excel file error python\nOptimized: Pandas read_excel engine openpyxl dependency error"
   },
   {
-    "objectID": "posts/stop-memorizing-syntax/index.html#utilizing-advanced-search-operators",
-    "href": "posts/stop-memorizing-syntax/index.html#utilizing-advanced-search-operators",
-    "title": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach",
-    "section": "Utilizing Advanced Search Operators",
-    "text": "Utilizing Advanced Search Operators\nTo refine search results, professionals should utilize boolean operators and search syntax modifiers.\n\nExact Match (\"\")\nEnclosing a phrase in double quotes forces the search engine to locate that exact string sequence. This is critical for searching unique error codes.\n\nUsage: \"Uncaught TypeError: Cannot read property 'map' of undefined\"\nUsage: \"SettingWithCopyWarning: A value is trying to be set on a copy of a slice\"\n\n\n\nExclusion (-)\nThe minus operator removes results containing specific terms. This is particularly useful for disambiguating terms that have multiple meanings.\n\nUsage: python tutorial -snake (Removes zoological results)\nUsage: java -minecraft (Focuses on the language, excluding gaming content)\n\n\n\nSource Filtering (site:)\nLimiting the search scope to reputable domains ensures the reliability of the information.\n\nUsage: site:stackoverflow.com sort dictionary by value\nUsage: site:kaggle.com random forest hyperparameter tuning"
+    "objectID": "posts/stop-memorizing-syntax/index.html#google-search-operators-you-need-to-know",
+    "href": "posts/stop-memorizing-syntax/index.html#google-search-operators-you-need-to-know",
+    "title": "Stop Memorizing Syntax: The Art of Effective Googling",
+    "section": "Google Search Operators You Need to Know",
+    "text": "Google Search Operators You Need to Know\nTo refine search results, professionals should utilize boolean operators and search syntax modifiers.\n\nExact Match (\"\")\nEnclosing a phrase in double quotes forces the search engine to locate that exact string sequence. This is critical for searching unique error codes.\n\nUsage: \"Uncaught TypeError: Cannot read property 'map' of undefined\"\nUsage: \"SettingWithCopyWarning: A value is trying to be set on a copy of a slice\"\n\n\n\nExclusion (-)\nThe minus operator removes results containing specific terms. This is particularly useful for disambiguating terms that have multiple meanings.\n\nUsage: python tutorial -snake (Removes zoological results)\nUsage: java -minecraft (Focuses on the language, excluding gaming content)\n\n\n\nSource Filtering (site:)\nLimiting the search scope to reputable domains ensures the reliability of the information.\n\nUsage: site:stackoverflow.com sort dictionary by value\nUsage: site:kaggle.com random forest hyperparameter tuning"
   },
   {
-    "objectID": "posts/stop-memorizing-syntax/index.html#temporal-relevance-and-versioning",
-    "href": "posts/stop-memorizing-syntax/index.html#temporal-relevance-and-versioning",
-    "title": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach",
-    "section": "Temporal Relevance and Versioning",
-    "text": "Temporal Relevance and Versioning\nTechnical ecosystems evolve rapidly. A solution that was standard practice three years ago may be deprecated or inefficient today. This is particularly true in Data Science (e.g., changes in Scikit-learn or TensorFlow APIs) and Frontend Development.\nMethodology:\nUtilize the search engine’s “Tools” feature to restrict results to the “Past Year”.\n\nThis mitigates the risk of implementing legacy code.\nIt ensures compatibility with current library versions."
+    "objectID": "posts/stop-memorizing-syntax/index.html#filter-by-date-dont-copy-deprecated-code",
+    "href": "posts/stop-memorizing-syntax/index.html#filter-by-date-dont-copy-deprecated-code",
+    "title": "Stop Memorizing Syntax: The Art of Effective Googling",
+    "section": "Filter by Date (Don’t Copy Deprecated Code)",
+    "text": "Filter by Date (Don’t Copy Deprecated Code)\nTechnical ecosystems evolve rapidly. A solution that was standard practice three years ago may be deprecated or inefficient today. This is particularly true in Data Science (e.g., changes in Scikit-learn or TensorFlow APIs) and Frontend Development.\nMethodology:\nUtilize the search engine’s “Tools” feature to restrict results to the “Past Year”.\n\nThis mitigates the risk of implementing legacy code.\nIt ensures compatibility with current library versions."
   },
   {
-    "objectID": "posts/stop-memorizing-syntax/index.html#error-message-analysis-and-sanitization",
-    "href": "posts/stop-memorizing-syntax/index.html#error-message-analysis-and-sanitization",
-    "title": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach",
-    "section": "Error Message Analysis and Sanitization",
-    "text": "Error Message Analysis and Sanitization\nA common pitfall is copying a raw stack trace directly into a search engine. Stack traces contain two types of information: generic error descriptions and local environment details.\nSearching for specific information (like local file paths) will yield zero results because those paths do not exist on other machines.\nSanitization Process:\nBefore searching, the error message must be stripped of local context.\n\nRaw Error: FileNotFoundError: [Errno 2] No such file or directory: '/Users/Yahya/Data/dataset.csv'\nSanitized Query: \"FileNotFoundError\" \"No such file or directory\" python"
+    "objectID": "posts/stop-memorizing-syntax/index.html#how-to-google-error-messages",
+    "href": "posts/stop-memorizing-syntax/index.html#how-to-google-error-messages",
+    "title": "Stop Memorizing Syntax: The Art of Effective Googling",
+    "section": "How to Google Error Messages",
+    "text": "How to Google Error Messages\nA common pitfall is copying a raw stack trace directly into a search engine. Stack traces contain two types of information: generic error descriptions and local environment details.\nSearching for specific information (like local file paths) will yield zero results because those paths do not exist on other machines.\nSanitization Process:\nBefore searching, the error message must be stripped of local context.\n\nRaw Error: FileNotFoundError: [Errno 2] No such file or directory: '/Users/Yahya/Data/dataset.csv'\nSanitized Query: \"FileNotFoundError\" \"No such file or directory\" python"
   },
   {
-    "objectID": "posts/stop-memorizing-syntax/index.html#the-xy-problem",
-    "href": "posts/stop-memorizing-syntax/index.html#the-xy-problem",
-    "title": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach",
-    "section": "The XY Problem",
-    "text": "The XY Problem\nThe “XY Problem” is a cognitive bias where a practitioner attempts to solve problem X, devises a potential solution Y, encounters an issue with Y, and then searches for help regarding Y.\nThis is counter-productive because Y may not be the correct approach.\nIllustrative Scenario (Data Science context):\n\nThe Original Objective (X): The analyst needs to remove rows with missing values from a dataset.\nThe Proposed Solution (Y): They attempt to loop through the dataframe and delete rows manually.\nThe Flawed Search: “How to delete row in for loop python pandas.”\nThe Correct Search: “Pandas drop missing values.” (Which leads to the efficient dropna() method).\n\nGuideline:\nAlways question whether the search query addresses the root objective (X) or the implementation detail of a specific attempt (Y)."
+    "objectID": "posts/stop-memorizing-syntax/index.html#beware-of-the-xy-problem",
+    "href": "posts/stop-memorizing-syntax/index.html#beware-of-the-xy-problem",
+    "title": "Stop Memorizing Syntax: The Art of Effective Googling",
+    "section": "Beware of the “XY Problem”",
+    "text": "Beware of the “XY Problem”\nThe “XY Problem” happens when you try to solve problem X, come up with a solution Y, get stuck on Y, and then ask for help with Y.\nThis is counter-productive because Y might not even be the right way to solve X.\nExample:\n\nThe Goal (X): Remove rows with missing values from a dataset.\nThe Attempt (Y): Write a for-loop to check and delete rows one by one.\nThe Bad Search: “How to delete row in for loop python pandas.”\nThe Good Search: “Pandas drop missing values.” (Which gives you dropna()).\n\nRule of Thumb:\nAlways ask yourself: “Am I searching for how to do what I think is the solution, or for the actual problem I’m trying to solve?”"
   },
   {
-    "objectID": "posts/stop-memorizing-syntax/index.html#the-role-of-generative-ai",
-    "href": "posts/stop-memorizing-syntax/index.html#the-role-of-generative-ai",
-    "title": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach",
-    "section": "The Role of Generative AI",
-    "text": "The Role of Generative AI\nLarge Language Models (LLMs) serve as powerful auxiliary tools for information retrieval, but they fundamentally differ from documentation.\nAppropriate Use Cases:\n\nSyntactical Explanation: Requesting an explanation of a complex SQL query or a specific Regular Expression.\nConceptual Overview: Asking for the trade-offs between two algorithms (e.g., XGBoost vs. LightGBM).\n\nLimitations:\nAI models are prone to “hallucination”—generating plausible-sounding but syntactically incorrect code. Consequently, code generated by AI should never be integrated without verification against official documentation.\n\nMastering the skill of searching changes how you approach problems. It turns a technical roadblock into an opportunity to learn. By using these techniques, you do not just fix the immediate error; you become a more self-reliant and capable professional. Ultimately, the most valuable skill is not having all the answers, but knowing exactly how to find them."
+    "objectID": "posts/stop-memorizing-syntax/index.html#using-ai-wisely-chatgpt-copilot",
+    "href": "posts/stop-memorizing-syntax/index.html#using-ai-wisely-chatgpt-copilot",
+    "title": "Stop Memorizing Syntax: The Art of Effective Googling",
+    "section": "Using AI Wisely (ChatGPT & Copilot)",
+    "text": "Using AI Wisely (ChatGPT & Copilot)\nAI tools like ChatGPT and GitHub Copilot are amazing for finding answers, but they aren’t perfect.\nGood Use Cases:\n\nExplaining Syntax: “What does this regex do?” or “Explain this SQL query.”\nComparing Concepts: “XGBoost vs. LightGBM trade-offs.”\n\nThe Danger:\nAI models can “hallucinate”—confidently giving you code that looks right but is completely wrong or uses non-existent libraries. Always verify AI-generated code against official documentation.\n\nMastering the art of Googling changes how you code. It turns a frustrating error into a quick fix and a learning moment. By using these techniques, you don’t just solve the problem—you become a better developer.\nRemember: The best engineers don’t have all the answers memorized—they just know exactly how to find them."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yahya Izadi",
+    "section": "",
+    "text": "Stop Memorizing Syntax: The Art of Effective Googling\n\n\nWhy mastering search is the most critical skill for developers and data scientists.\n\n\n\nTechnical Skills\n\nData Science\n\nProfessional Development\n\n\n\n\n\n\n\n\n\nJan 3, 2026\n\n\nYahya\n\n\n\n\n\n\n\n\n\n\n\n\nApplication of Approximation Theory in Data Science\n\n\n\n\n\n\nData Science\n\nMachine Learning\n\nNumerical Analysis\n\nMathematics\n\n\n\nExploring how approximation theory serves as the mathematical backbone of modern machine learning and data fitting techniques.\n\n\n\n\n\nDec 30, 2025\n\n\nYahya Izadi\n\n\n\n\n\n\n\n\n\n\n\n\nJava Scanner: The Ultimate Beginner’s Guide\n\n\nHow to make your Java programs listen to the user\n\n\n\nJava\n\nProgramming\n\nBeginners\n\nTutorial\n\n\n\n\n\n\n\n\n\nNov 24, 2025\n\n\nYahya Izadi, Pooyan Motamedi\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog\n\n\n Back to top"
   },
   {
     "objectID": "posts/approximation-theory-data-science/index.html",
@@ -110,20 +124,6 @@
     "title": "Application of Approximation Theory in Data Science",
     "section": "Final Simulation: Reconstructing a Complex Signal",
     "text": "Final Simulation: Reconstructing a Complex Signal\nTo show the power of Continuous Least Squares, let’s reconstruct a complex signal (mixed sine, cosine, and exponentials) using Legendre polynomials. Because of orthogonality, we can compute the “contribution” of each degree independently.\n\n\n\n\n\n\n\n\nFigure 7\n\n\n\n\n\nThis process highlights the elegance of the math: by projecting complex realities onto simpler orthogonal structures, we get both speed and clarity.\n\nCourse Info:\n\nInstructor: Dr. Najmeh Hosseini Monjezi\nUniversity: University of Isfahan"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Yahya Izadi",
-    "section": "",
-    "text": "Information Retrieval Efficacy in Technical Disciplines: A Unified Approach\n\n\nOptimizing problem-solving workflows for Software Engineers, Data Scientists, and Technical Professionals.\n\n\n\nTechnical Skills\n\nData Science\n\nProfessional Development\n\n\n\n\n\n\n\n\n\nJan 3, 2026\n\n\nYahya\n\n\n\n\n\n\n\n\n\n\n\n\nApplication of Approximation Theory in Data Science\n\n\n\n\n\n\nData Science\n\nMachine Learning\n\nNumerical Analysis\n\nMathematics\n\n\n\nExploring how approximation theory serves as the mathematical backbone of modern machine learning and data fitting techniques.\n\n\n\n\n\nDec 30, 2025\n\n\nYahya Izadi\n\n\n\n\n\n\n\n\n\n\n\n\nJava Scanner: The Ultimate Beginner’s Guide\n\n\nHow to make your Java programs listen to the user\n\n\n\nJava\n\nProgramming\n\nBeginners\n\nTutorial\n\n\n\n\n\n\n\n\n\nNov 24, 2025\n\n\nYahya Izadi, Pooyan Motamedi\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "posts/java-scanner/index.html",
